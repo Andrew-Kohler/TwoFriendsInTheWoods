@@ -32,10 +32,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        // x
-        horizontalInput = Input.GetAxis("Horizontal");
-        verticalInput = Input.GetAxis("Vertical");
-
+        // Raycast grounded check
         if(Physics.Raycast(rb.position, Vector3.down, out RaycastHit hit) && hit.distance < groundThreshold)
         {
             raycastGrounded = true;
@@ -45,8 +42,20 @@ public class PlayerMovement : MonoBehaviour
             raycastGrounded = false;
         }
 
-        if (grounded && raycastGrounded && Input.GetButtonDown("Jump"))
-            jumping = true;
+        // Player control is only given during gameplay
+        if (GameManager.Instance._currentGameState == GameManager.GameState.Gameplay)
+        {
+            horizontalInput = Input.GetAxis("Horizontal");
+            verticalInput = Input.GetAxis("Vertical");
+
+            if (grounded && raycastGrounded && Input.GetButtonDown("Jump"))
+                jumping = true;
+        }
+        else
+        {
+            horizontalInput = 0;
+            verticalInput = 0;
+        }
 
         velocity = new Vector3(horizontalInput * movementSpeed, rb.velocity.y, verticalInput * movementSpeed);
     }
