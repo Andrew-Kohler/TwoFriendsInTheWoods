@@ -138,7 +138,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &12078067
 RectTransform:
   m_ObjectHideFlags: 0
@@ -155,9 +155,9 @@ RectTransform:
   - {fileID: 12200816}
   m_Father: {fileID: 2143235540}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -303, y: -299}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: -303, y: 241}
   m_SizeDelta: {x: 606, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &12200815
@@ -1046,6 +1046,7 @@ GameObject:
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
   - component: {fileID: 963194230}
+  - component: {fileID: 963194231}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1097,7 +1098,7 @@ Camera:
   field of view: 60.000004
   orthographic: 0
   orthographic size: 5
-  m_Depth: -1
+  m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -1120,7 +1121,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.11562053, y: -0.0000000042727457, z: 4.973526e-10, w: 0.99329346}
+  m_LocalRotation: {x: 0.11562054, y: 0.000000004272748, z: -4.973529e-10, w: 0.99329346}
   m_LocalPosition: {x: -44.49, y: 6.06, z: -10.64}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1161,6 +1162,21 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &963194231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13df98f9dd90cb94eaa01a336ee615e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  point1: {x: 0.2, y: 0.5}
+  point2: {x: 0.1, y: 0.3}
+  point3: {x: 0.4, y: 0.3}
 --- !u!4 &1012656088 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: fe279c37ee1a2a847be470c55a065453, type: 3}
@@ -1440,7 +1456,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 0}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2142,7 +2158,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1937020576}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.11562053, y: -0.0000000042727457, z: 4.973526e-10, w: 0.99329346}
+  m_LocalRotation: {x: 0.11562054, y: 0.000000004272748, z: -4.973529e-10, w: 0.99329346}
   m_LocalPosition: {x: -44.49, y: 6.06, z: -10.64}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
