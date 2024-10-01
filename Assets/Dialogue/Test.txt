@@ -1,3 +1,0 @@
-This is a test document.\n
-This is the second line of the document.\n
-This is the end of the document.\e

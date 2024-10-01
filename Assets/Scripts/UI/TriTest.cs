@@ -36,9 +36,9 @@ public class TriTest : MonoBehaviour
         GL.LoadOrtho();
         GL.Begin(GL.TRIANGLES);
         GL.Color(Color.black);
-        GL.Vertex3(point1.x, point1.y + .01f, 0);
-        GL.Vertex3(point2.x - .01f, point2.y, 0);
-        GL.Vertex3(point3.x + .01f, point3.y, 0);
+        //GL.Vertex3(point1.x, point1.y + .01f, 0);
+        //GL.Vertex3(point2.x - .01f, point2.y, 0);
+        //GL.Vertex3(point3.x + .01f, point3.y, 0);
         GL.Color(Color.white);
         GL.Vertex3(point1.x, point1.y, 0);
         GL.Vertex3(point2.x, point2.y, 0);
@@ -46,5 +46,10 @@ public class TriTest : MonoBehaviour
         
         GL.End();
         GL.PopMatrix();
+    }
+
+    public void SetPoint1(Vector2 point)
+    {
+        point1 = point;
     }
 }
