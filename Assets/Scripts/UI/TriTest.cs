@@ -9,6 +9,7 @@ public class TriTest : MonoBehaviour
     public Vector2 point1;
     public Vector2 point2;
     public Vector2 point3;
+    public bool IsActive;
 
     void CreateLineMaterial()
     {
@@ -27,25 +28,29 @@ public class TriTest : MonoBehaviour
 
     void OnPostRender()
     {
-        if (!lineMaterial)
+        if (IsActive)
         {
-            CreateLineMaterial();
+            if (!lineMaterial)
+            {
+                CreateLineMaterial();
+            }
+            GL.PushMatrix();
+            lineMaterial.SetPass(0);
+            GL.LoadOrtho();
+            GL.Begin(GL.TRIANGLES);
+            GL.Color(Color.black);
+            //GL.Vertex3(point1.x, point1.y + .01f, 0);
+            //GL.Vertex3(point2.x - .01f, point2.y, 0);
+            //GL.Vertex3(point3.x + .01f, point3.y, 0);
+            GL.Color(Color.white);
+            GL.Vertex3(point1.x, point1.y, 0);
+            GL.Vertex3(point2.x, point2.y, 0);
+            GL.Vertex3(point3.x, point3.y, 0);
+
+            GL.End();
+            GL.PopMatrix();
         }
-        GL.PushMatrix();
-        lineMaterial.SetPass(0);
-        GL.LoadOrtho();
-        GL.Begin(GL.TRIANGLES);
-        GL.Color(Color.black);
-        //GL.Vertex3(point1.x, point1.y + .01f, 0);
-        //GL.Vertex3(point2.x - .01f, point2.y, 0);
-        //GL.Vertex3(point3.x + .01f, point3.y, 0);
-        GL.Color(Color.white);
-        GL.Vertex3(point1.x, point1.y, 0);
-        GL.Vertex3(point2.x, point2.y, 0);
-        GL.Vertex3(point3.x, point3.y, 0);
         
-        GL.End();
-        GL.PopMatrix();
     }
 
     public void SetPoint1(Vector2 point)

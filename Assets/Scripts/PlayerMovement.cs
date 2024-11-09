@@ -13,17 +13,20 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody rb;
 
     // Control variables
-    public float movementSpeed = 7f;
-    public float jumpForce = 70f;
+    public float MovementSpeed = 7f;
+    public float JumpForce = 70f;
     public float groundThreshold = .1f;
 
-    public float horizontalInput;
-    public float verticalInput;
+    public float HorizontalInput;
+    public float VerticalInput;
 
     private Vector3 velocity;
-    public bool grounded = false;
-    public bool raycastGrounded = false;
-    private bool jumping = false;
+    public bool Grounded = false;
+    public bool RaycastGrounded = false;
+    private bool _jumping = false;
+
+    private bool _isInteractionMoving;
+    private Vector3 _toMoveTowards;
 
     void Start()
     {
@@ -35,29 +38,29 @@ public class PlayerMovement : MonoBehaviour
         // Raycast grounded check
         if(Physics.Raycast(rb.position, Vector3.down, out RaycastHit hit) && hit.distance < groundThreshold)
         {
-            raycastGrounded = true;
+            RaycastGrounded = true;
         }
         else
         {
-            raycastGrounded = false;
+            RaycastGrounded = false;
         }
 
         // Player control is only given during gameplay
         if (GameManager.Instance._currentGameState == GameManager.GameState.Gameplay)
         {
-            horizontalInput = Input.GetAxis("Horizontal");
-            verticalInput = Input.GetAxis("Vertical");
+            HorizontalInput = Input.GetAxis("Horizontal");
+            VerticalInput = Input.GetAxis("Vertical");
 
-            if (grounded && raycastGrounded && Input.GetButtonDown("Jump"))
-                jumping = true;
+            if (Grounded && RaycastGrounded && Input.GetButtonDown("Jump"))
+                _jumping = true;
         }
         else
         {
-            horizontalInput = 0;
-            verticalInput = 0;
+            HorizontalInput = 0;
+            VerticalInput = 0;
         }
 
-        velocity = new Vector3(horizontalInput * movementSpeed, rb.velocity.y, verticalInput * movementSpeed);
+        velocity = new Vector3(HorizontalInput * MovementSpeed, rb.velocity.y, VerticalInput * MovementSpeed);
     }
 
     private void FixedUpdate()
@@ -67,20 +70,35 @@ public class PlayerMovement : MonoBehaviour
 
     private void MovePlayer3D()
     {
-        rb.velocity = velocity;
-        if (jumping)
+        if (GameManager.Instance._currentGameState == GameManager.GameState.Gameplay)
         {
-            rb.AddForce(new Vector3(0, jumpForce, 0), ForceMode.Impulse);
-            jumping = false;
+            rb.velocity = velocity;
+            if (_jumping)
+            {
+                rb.AddForce(new Vector3(0, JumpForce, 0), ForceMode.Impulse);
+                _jumping = false;
+            }
+        }
+
+        if (_isInteractionMoving)
+        {
+            if(Vector3.Distance(transform.position, _toMoveTowards) > .1f)
+                transform.position = Vector3.MoveTowards(transform.position, _toMoveTowards, MovementSpeed * Time.deltaTime);
         }
             
+    }
+
+    public void MoveToPoint(bool active, Vector3 point)
+    {
+        _toMoveTowards = point;
+        _isInteractionMoving = active;
     }
 
     private void OnCollisionStay(Collision collision)
     {
         if (collision.gameObject.layer == 6) // Level geometry
         {
-            grounded = true;
+            Grounded = true;
         }
     }
 
@@ -88,7 +106,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.gameObject.layer == 6) 
         {
-            grounded = false;
+            Grounded = false;
         }
     }
 

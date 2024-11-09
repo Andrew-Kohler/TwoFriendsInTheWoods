@@ -12,6 +12,8 @@ public class InteractionController : MonoBehaviour
 
     [SerializeField] private Conversation _dialogue;
 
+    [SerializeField] private PlayerMovement _move;
+
     // Points the characters will navigate to for cutscene
     [SerializeField] private Transform _character1InteractPoint;
     [SerializeField] private Transform _character2InteractPoint;
@@ -49,7 +51,9 @@ public class InteractionController : MonoBehaviour
         _mainCamera.gameObject.SetActive(false);
 
         // Move the players to certain points
+        _move.MoveToPoint(true, _character1InteractPoint.transform.position);
         yield return new WaitForSeconds(2f);
+        _move.MoveToPoint(false, _character1InteractPoint.transform.position);
 
         Vector3 chara1Raw = Camera.main.WorldToScreenPoint(_character1InteractPoint.transform.position);
         Vector2 chara1Screen = new Vector3(chara1Raw.x / Screen.width, chara1Raw.y / Screen.height);
@@ -58,17 +62,17 @@ public class InteractionController : MonoBehaviour
 
         // Trigger the dialogue sequence
         ViewManager.Show<Dialogue>(false);
-        
-        for(int i = 0; i < _dialogue.lines.Count; i++)
+        ViewManager.GetView<Dialogue>().WakeTri(true);
+        for (int i = 0; i < _dialogue.lines.Count; i++)
         {
             isSkippingLine = false;
             if (_dialogue.bubbleChara1[i])
             {
-                ViewManager.GetView<Dialogue>().setBubbleConnector(chara1Screen);
+                ViewManager.GetView<Dialogue>().setBubbleConnector(chara2Screen);
             }
             else
             {
-                ViewManager.GetView<Dialogue>().setBubbleConnector(chara2Screen);
+                ViewManager.GetView<Dialogue>().setBubbleConnector(chara1Screen);
             }
             StartCoroutine(DoTextEscapeSubroutine());
             for (int j = 0; j < _dialogue.lines[i].Length; j++)
@@ -96,17 +100,22 @@ public class InteractionController : MonoBehaviour
             yield return new WaitUntil(() => Input.GetButtonDown("Interact"));
         }
         // Wait until that's done
+        ViewManager.GetView<Dialogue>().WakeTri(false);
         ViewManager.Show<Standard>(false);
+
 
         // Move the players back to a resumable spot
 
         // Blend the camera back to main camera
         _mainCamera.gameObject.SetActive(true);
 
+        yield return new WaitForSeconds(2f);
+
         // Return control to the player
         GameManager.Instance._currentGameState = GameManager.GameState.Gameplay;
 
         _activeCoroutine = false;
+        Destroy(gameObject);
         yield return null;  
     }
 

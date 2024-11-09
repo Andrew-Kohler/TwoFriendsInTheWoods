@@ -27,4 +27,8 @@ public class Dialogue : View
     {
         tri.SetPoint1(point);
     }
+    public void WakeTri(bool awake)
+    {
+        tri.IsActive= awake;
+    }
 }

@@ -13,6 +13,8 @@ Shader "Example/Test S"
             CGPROGRAM
             #pragma vertex vert
             #pragma fragment frag
+            #pragma shader_feature _RENDERING_CUTOUT
+            #pragma shader_feature _SMOOTHNESS_ALBEDO
             #include "UnityCG.cginc"
             #include "Lighting.cginc"
 
@@ -21,6 +23,8 @@ Shader "Example/Test S"
         #pragma multi_compile_fwdbase nolightmap nodirlightmap nodynlightmap novertexlight
         // shadow helper functions and macros
         #include "AutoLight.cginc"
+
+
 
         struct v2f
         {
@@ -49,7 +53,14 @@ Shader "Example/Test S"
 
         fixed4 frag(v2f i) : SV_Target
         {
-            fixed4 col = tex2D(_MainTex, i.uv);
+            
+        fixed4 col = tex2D(_MainTex, i.uv);
+
+        // Alpha clipping without properly accounting for shadow casting
+        float alpha = tex2D(_MainTex, i.uv.xy).a;
+        clip(alpha - 0.5);
+        
+
         // compute shadow attenuation (1.0 = fully lit, 0.0 = fully shadowed)
         fixed shadow = SHADOW_ATTENUATION(i);
         if (shadow < 1) // we have achieved the absolute
