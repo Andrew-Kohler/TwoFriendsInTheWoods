@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager _instance;
 
-    public enum GameState { Gameplay, Interaction, Pause };
+    public enum GameState { Gameplay, Interaction, Pause, Load };
     public GameState _currentGameState;
 
 

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Terrain
   - Cam_V-Main
+  - Cam_V-Angle
   layers:
   - Default
   - TransparentFX
