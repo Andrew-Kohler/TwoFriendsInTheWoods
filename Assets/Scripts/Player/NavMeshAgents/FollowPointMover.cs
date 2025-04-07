@@ -8,8 +8,13 @@ public class FollowPointMover : MonoBehaviour
     [SerializeField] private float _followDistX;     // How far away the point should be (x)
     [SerializeField] private float _followDistZ;     // How far away the point should be (x)
     private float _xVal;
-    [SerializeField] private float _yVal;
     private float _zVal;
+
+    [Header("Direction Determining")]
+    [SerializeField, Tooltip("Player movement script")] private PlayerMovement _pMovement;
+    [SerializeField, Tooltip("Player follower AI script")] private Follower _pFollower;
+
+    private PlayerMovement.Direction _currentDir;
 
     public float HorizontalInput;
     public float VerticalInput;
@@ -19,6 +24,14 @@ public class FollowPointMover : MonoBehaviour
     {
         _xVal = this.transform.position.x;
         _zVal = this.transform.position.z;
+        if (_pMovement.enabled)
+        {
+            _currentDir = _pMovement.GetDirection();
+        }
+        else
+        {
+            _currentDir = _pFollower.GetDirection();
+        }
     }
 
     // Update is called once per frame
@@ -29,7 +42,59 @@ public class FollowPointMover : MonoBehaviour
             HorizontalInput = Input.GetAxis("Horizontal");
             VerticalInput = Input.GetAxis("Vertical");
 
-            // Checks for 0 input only occur as long as at least some movement is happening
+            // Get our animation data from the correct source
+            if (_pMovement.enabled)
+            {
+                _currentDir = _pMovement.GetDirection();
+            }
+            else
+            {
+                _currentDir = _pFollower.GetDirection();
+            }
+
+            /*if(HorizontalInput != 0 || VerticalInput != 0) // Make sure we're moving
+            {*/
+                switch (_currentDir)
+                {
+                    case PlayerMovement.Direction.Forwards:
+                        _xVal = this.transform.position.x;
+                        _zVal = this.transform.position.z + _followDistZ;
+                        break;
+                    case PlayerMovement.Direction.ForwardsLeft:
+                        _xVal = this.transform.position.x + _followDistX;
+                        _zVal = this.transform.position.z + _followDistZ;
+                        break;
+                    case PlayerMovement.Direction.ForwardsRight:
+                        _xVal = this.transform.position.x - _followDistX;
+                        _zVal = this.transform.position.z + _followDistZ;
+                        break;
+                    case PlayerMovement.Direction.Left:
+                        _xVal = this.transform.position.x + _followDistX;
+                        _zVal = this.transform.position.z;
+                        break;
+                    case PlayerMovement.Direction.Right:
+                        _xVal = this.transform.position.x - _followDistX;
+                        _zVal = this.transform.position.z;
+                        break;
+                    case PlayerMovement.Direction.BackwardsLeft:
+                        _xVal = this.transform.position.x + _followDistX;
+                        _zVal = this.transform.position.z - _followDistZ;
+                        break;
+                    case PlayerMovement.Direction.BackwardsRight:
+                        _xVal = this.transform.position.x - _followDistX;
+                        _zVal = this.transform.position.z - _followDistZ;
+                        break;
+                    case PlayerMovement.Direction.Backwards:
+                        _xVal = this.transform.position.x;
+                        _zVal = this.transform.position.z - _followDistZ;
+                        break;
+                    default:
+                        _xVal = this.transform.position.x;
+                        _zVal = this.transform.position.z;
+                        break;
+                }
+           // }
+            /*// Checks for 0 input only occur as long as at least some movement is happening
             // This ensures the follow point will never snap back inside the player
             if (HorizontalInput < 0)
             {
@@ -58,34 +123,10 @@ public class FollowPointMover : MonoBehaviour
                 _zVal = this.transform.position.z - _followDistZ;
                 if (HorizontalInput == 0)
                     _xVal = this.transform.position.x;
-            }
+            }*/
 
             _followPoint.position = new Vector3(_xVal, _followPoint.position.y, _zVal);
             
         }
-    }
-
-    public Vector3 getPlayerDirection()
-    {
-        float xDir = 0, zDir = 0;
-        if(HorizontalInput < 0)
-        {
-            xDir = -1;
-        }
-        else if(HorizontalInput > 0)
-        {
-            xDir = 1;
-        }
-
-        if (VerticalInput < 0)
-        {
-            zDir = -1;
-        }
-        else if (VerticalInput > 0)
-        {
-            zDir = 1;
-        }
-
-        return new Vector3(xDir, 1, zDir);
     }
 }

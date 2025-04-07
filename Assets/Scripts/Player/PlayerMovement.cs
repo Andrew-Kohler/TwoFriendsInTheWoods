@@ -106,6 +106,7 @@ public class PlayerMovement : MonoBehaviour
     {
         float threshold = .001f;
         Vector2 dir = Vector2.zero;
+        _rb = GetComponent<Rigidbody>();
         dir.x = _rb.velocity.x;
         dir.y = _rb.velocity.z;
 

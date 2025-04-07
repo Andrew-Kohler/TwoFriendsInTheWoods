@@ -18,6 +18,7 @@ public class PlayerAnimatior : MonoBehaviour
     [SerializeField] private int _aIndex = 0;
     [Header("Player Related Values")]
     [SerializeField, Tooltip("Player movement script")] private PlayerMovement _pMovement;
+    [SerializeField, Tooltip("Player follower AI script")] private Follower _pFollower;
     [SerializeField] private List<AudioClip> playerSounds;
 
     private bool faceAwayBool;
@@ -113,8 +114,18 @@ public class PlayerAnimatior : MonoBehaviour
             _verticalInput = 0;
         }
 
-        _animDir = _pMovement.GetDirection();
-        _pAction = _pMovement.GetAction();
+        // Get our animation data from the correct source
+        if (_pMovement.enabled)
+        {
+            _animDir = _pMovement.GetDirection();
+            _pAction = _pMovement.GetAction();
+        }
+        else
+        {
+            _animDir = _pFollower.GetDirection();
+            _pAction = _pFollower.GetAction();
+        }
+
 
         // The logic that determines what animation should be played 
         if (!IsSettings() && !activeCoroutine)

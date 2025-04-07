@@ -9,12 +9,23 @@ public class Follower : MonoBehaviour
     NavMeshAgent agent;
     public float StopDistance = .1f; // How far away we need to be before we don't need to track anymore
     private Rigidbody _rb;
+    public float groundThreshold = .1f;
+    public bool RaycastGrounded = false;
+
+    private PlayerMovement.Direction _currentDir;
+    private PlayerMovement.Action _currentAction;
 
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         agent.updatePosition = false;
         _rb = GetComponent<Rigidbody>();    
+    }
+
+    private void OnEnable()
+    {
+        agent = GetComponent<NavMeshAgent>();
+        agent.nextPosition = this.transform.position;
     }
 
     private void Update()
@@ -30,7 +41,18 @@ public class Follower : MonoBehaviour
             else
                 _rb.useGravity = true;
         }
-        
+
+        // Grounded check here exists purely for animation purposes
+        if (Physics.Raycast(_rb.position, Vector3.down, out RaycastHit hit) && hit.distance < groundThreshold)
+        {
+            RaycastGrounded = true;
+        }
+        else
+        {
+            RaycastGrounded = false;
+        }
+
+
     }
 
     private void FixedUpdate()
@@ -57,5 +79,103 @@ public class Follower : MonoBehaviour
         // _rb.velocity = agent.desiredVelocity;
         //else
         //    _rb.velocity = Vector3.zero;
+    }
+
+    public PlayerMovement.Direction GetDirection() // Returns the direction the player is facing
+    {
+        float significanceThreshold = .01f; // Any value below this is essentially 0
+        /*Vector2 dir = Vector2.zero;
+        dir.x = _rb.velocity.x;
+        dir.y = _rb.velocity.z;
+
+        if (Mathf.Abs(dir.x) < threshold)
+            dir.x = 0;
+        if (Mathf.Abs(dir.y) < threshold)
+            dir.y = 0;*/
+
+        if (Mathf.Abs(Vector3.Distance(goal.position, this.transform.position)) > StopDistance) // Only update direction in motion
+        {
+            float xDist = goal.position.x - this.transform.position.x;
+            float zDist = goal.position.z - this.transform.position.z;
+
+            if (Mathf.Abs(xDist) < significanceThreshold)
+                xDist = 0;
+            if (Mathf.Abs(zDist) < significanceThreshold)
+                zDist = 0;
+
+            if (xDist > 0) // Goal X greater than Follower X (go right)
+            {
+                if (zDist > 0) // Goal Z greater than Follower Z (go away)
+                {
+                    _currentDir = PlayerMovement.Direction.BackwardsRight;
+                }
+                else if (zDist < 0) // Goal Z less than Follower Z (go towards)
+                {
+                    _currentDir = PlayerMovement.Direction.ForwardsRight;
+                }
+                else // No Z motion (just right)
+                {
+                    _currentDir = PlayerMovement.Direction.Right;
+                }
+            }
+            else if (xDist < 0) // Goal X less than Follower X (go left)
+            {
+                if (zDist > 0) // Goal Z greater than Follower Z (go away)
+                {
+                    _currentDir = PlayerMovement.Direction.BackwardsLeft;
+                }
+                else if (zDist < 0) // Goal Z less than Follower Z (go towards)
+                {
+                    _currentDir = PlayerMovement.Direction.ForwardsLeft;
+                }
+                else // No Z motion (just left)
+                {
+                    _currentDir = PlayerMovement.Direction.Left;
+                }
+            }
+            else if (zDist > 0) // Goal Z greater than Follower Z (go away)
+            {
+                _currentDir = PlayerMovement.Direction.Backwards;
+            }
+            else if (zDist < 0) // Goal Z less than Follower Z (go towards)
+            {
+                _currentDir = PlayerMovement.Direction.Forwards;
+            }
+        }
+
+        return _currentDir;
+
+    }
+
+    public PlayerMovement.Action GetAction() // Returns the general action the player is undertaking
+    {
+        float threshold = .001f;
+        Vector2 dir = Vector2.zero;
+        dir.x = _rb.velocity.x;
+        dir.y = _rb.velocity.z;
+
+        if (Mathf.Abs(dir.x) < threshold)
+            dir.x = 0;
+        if (Mathf.Abs(dir.y) < threshold)
+            dir.y = 0;
+
+        if (Mathf.Abs(Vector3.Distance(goal.position, this.transform.position)) > StopDistance) // Determining whether we are walking or idling
+        {
+            _currentAction = PlayerMovement.Action.Walk;
+        }
+        else
+        {
+            _currentAction = PlayerMovement.Action.Idle;
+        }
+
+        if (!RaycastGrounded) // Jumping overrides any previous state determination
+        {
+            if (_rb.velocity.y > 0)
+                _currentAction = PlayerMovement.Action.JumpUp;
+            else
+                _currentAction = PlayerMovement.Action.JumpDown;
+        }
+
+        return _currentAction;
     }
 }
