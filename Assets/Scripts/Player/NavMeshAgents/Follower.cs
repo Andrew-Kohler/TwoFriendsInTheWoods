@@ -11,6 +11,7 @@ public class Follower : MonoBehaviour
     private Rigidbody _rb;
     public float groundThreshold = .1f;
     public bool RaycastGrounded = false;
+    public bool Navigate = true;
 
     private PlayerMovement.Direction _currentDir;
     private PlayerMovement.Action _currentAction;
@@ -26,6 +27,7 @@ public class Follower : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         agent.nextPosition = this.transform.position;
+        Navigate = true;
     }
 
     private void Update()
@@ -62,7 +64,8 @@ public class Follower : MonoBehaviour
             if (Mathf.Abs(Vector3.Distance(goal.position, this.transform.position)) > StopDistance)
             {
                 _rb.constraints = RigidbodyConstraints.FreezeRotation;
-                this.transform.position = agent.nextPosition;
+                if(Navigate)
+                    this.transform.position = agent.nextPosition;
             }
             else
             {
@@ -149,17 +152,17 @@ public class Follower : MonoBehaviour
 
     public PlayerMovement.Action GetAction() // Returns the general action the player is undertaking
     {
-        float threshold = .001f;
-        Vector2 dir = Vector2.zero;
+        //float threshold = .001f;
+       /* Vector2 dir = Vector2.zero;
         dir.x = _rb.velocity.x;
         dir.y = _rb.velocity.z;
 
         if (Mathf.Abs(dir.x) < threshold)
             dir.x = 0;
         if (Mathf.Abs(dir.y) < threshold)
-            dir.y = 0;
+            dir.y = 0;*/
 
-        if (Mathf.Abs(Vector3.Distance(goal.position, this.transform.position)) > StopDistance) // Determining whether we are walking or idling
+        if (Mathf.Abs(Vector3.Distance(goal.position, this.transform.position)) > StopDistance && Navigate) // Determining whether we are walking or idling
         {
             _currentAction = PlayerMovement.Action.Walk;
         }
@@ -170,6 +173,7 @@ public class Follower : MonoBehaviour
 
         if (!RaycastGrounded) // Jumping overrides any previous state determination
         {
+            _rb = GetComponent<Rigidbody>();
             if (_rb.velocity.y > 0)
                 _currentAction = PlayerMovement.Action.JumpUp;
             else

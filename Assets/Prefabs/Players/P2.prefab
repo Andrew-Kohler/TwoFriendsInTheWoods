@@ -203,6 +203,7 @@ MonoBehaviour:
   _player1TF: {fileID: 0}
   _player1Follower: {fileID: 0}
   _holdTF: {fileID: 1595847994194341002}
+  _player2Movement: {fileID: 5612398307442045113}
   _holdSpeed: 4
   _holdResetTime: 2
   _angleCam: {fileID: 0}
