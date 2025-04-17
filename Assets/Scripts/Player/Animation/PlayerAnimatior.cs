@@ -130,7 +130,7 @@ public class PlayerAnimatior : MonoBehaviour
         // The logic that determines what animation should be played 
         if (!IsSettings() && !activeCoroutine)
         {
-            if (IsGameplay()) // Logic for idle and walk cycles that occur during normal exploration
+            if (IsGameplay() || IsInteraction()) // Logic for idle and walk cycles that occur during normal exploration
             {
                 _frameReset = 0;
                 animationSpeed = 8f;
@@ -329,11 +329,6 @@ public class PlayerAnimatior : MonoBehaviour
                 }
 
                 _frameLoop = _frameReset;
-            }
-
-            else if (IsInteraction())
-            {
-
             }
 
             string clipKey, frameKey; 

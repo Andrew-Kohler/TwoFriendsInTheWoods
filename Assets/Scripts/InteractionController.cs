@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
+using UnityEngine.AI;
+using Unity.Mathematics;
 
 public class InteractionController : MonoBehaviour
 {
@@ -12,15 +14,25 @@ public class InteractionController : MonoBehaviour
 
     [SerializeField] private Conversation _dialogue;
 
-    [SerializeField] private PlayerMovement _move;
+    // Player GameObjects
+    [SerializeField, Tooltip ("Player 1")] private GameObject _p1;
+    [SerializeField, Tooltip("Player 2")] private GameObject _p2;
+
+    // Player components
+    private PlayerMovement _p1Move;
+    private Follower _p1Follow;
+    private NavMeshAgent _p1Agent;
+
+    private PlayerMovement _p2Move;
+    private Follower _p2Follow;
+    private NavMeshAgent _p2Agent;
+
+    private bool _wasP1Leader;
 
     // Points the characters will navigate to for cutscene
     [SerializeField] private Transform _character1InteractPoint;
     [SerializeField] private Transform _character2InteractPoint;
-
-    // Points the characters will navigate to before resuming play
-    [SerializeField] private Transform _character1ResumePoint;
-    [SerializeField] private Transform _character2ResumePoint;
+    [SerializeField] private ParticleSystem _sys;
 
     // Private variables
     private bool _canInteract;
@@ -30,6 +42,14 @@ public class InteractionController : MonoBehaviour
     void Start()
     {
         _mainCamera = GameObject.Find("VirtualMain").GetComponent<CinemachineVirtualCamera>();
+
+        _p1Move = _p1.GetComponent<PlayerMovement>();
+        _p1Follow = _p1.GetComponent<Follower>();
+        _p1Agent = _p1.GetComponent<NavMeshAgent>();
+
+        _p2Move = _p2.GetComponent<PlayerMovement>();
+        _p2Follow = _p2.GetComponent<Follower>();
+        _p2Agent = _p2.GetComponent<NavMeshAgent>();
     }
 
     // Update is called once per frame
@@ -50,29 +70,57 @@ public class InteractionController : MonoBehaviour
         _interactionCamera.gameObject.SetActive(true);
         _mainCamera.gameObject.SetActive(false);
 
-        // Move the players to certain points
-        _move.MoveToPoint(true, _character1InteractPoint.transform.position);
-        yield return new WaitForSeconds(2f);
-        _move.MoveToPoint(false, _character1InteractPoint.transform.position);
+        ParticleSystem.EmissionModule e = _sys.emission;
+        e.rateOverTime = 0;
+        GetComponent<MeshRenderer>().enabled = false;
 
-        Vector3 chara1Raw = Camera.main.WorldToScreenPoint(_character1InteractPoint.transform.position);
+        // Move the players to certain points
+        if (_p1Move.enabled)
+        {
+            _wasP1Leader = true;
+
+            _p1Move.enabled = false;
+
+            _p1Follow.enabled = true;
+            _p1Agent.enabled = true;
+        }
+        else
+        {
+            _wasP1Leader = false;
+
+            _p2Move.enabled = false;
+
+            _p2Follow.enabled = true;
+            _p2Agent.enabled = true;
+        }
+
+        Transform _oldP1 = _p1Follow.GetGoal();
+        Transform _oldP2 = _p2Follow.GetGoal();
+        _p1Follow.SetGoal(_character1InteractPoint);
+        _p2Follow.SetGoal(_character2InteractPoint);
+        yield return new WaitForSeconds(2f);
+
+        Vector3 chara1Raw = Camera.main.WorldToScreenPoint(_p1.transform.position);
         Vector2 chara1Screen = new Vector3(chara1Raw.x / Screen.width, chara1Raw.y / Screen.height);
-        Vector3 chara2Raw = Camera.main.WorldToScreenPoint(_character2InteractPoint.transform.position);
+        Vector3 chara2Raw = Camera.main.WorldToScreenPoint(_p2.transform.position);
         Vector2 chara2Screen = new Vector3(chara2Raw.x / Screen.width, chara2Raw.y / Screen.height);
+
+        float chara1XTrue = math.remap(0, 1, -575, 575, chara1Screen.x);
+        float chara2XTrue = math.remap(0, 1, -575, 575, chara2Screen.x);
 
         // Trigger the dialogue sequence
         ViewManager.Show<Dialogue>(false);
-        ViewManager.GetView<Dialogue>().WakeTri(true);
+        //ViewManager.GetView<Dialogue>().WakeTri(true);
         for (int i = 0; i < _dialogue.lines.Count; i++)
         {
             isSkippingLine = false;
             if (_dialogue.bubbleChara1[i])
             {
-                ViewManager.GetView<Dialogue>().setBubbleConnector(chara2Screen);
+                ViewManager.GetView<Dialogue>().setBubbleConnector(false, chara2XTrue);
             }
             else
             {
-                ViewManager.GetView<Dialogue>().setBubbleConnector(chara1Screen);
+                ViewManager.GetView<Dialogue>().setBubbleConnector(true, chara1XTrue);
             }
             StartCoroutine(DoTextEscapeSubroutine());
             for (int j = 0; j < _dialogue.lines[i].Length; j++)
@@ -100,19 +148,34 @@ public class InteractionController : MonoBehaviour
             yield return new WaitUntil(() => Input.GetButtonDown("Interact"));
         }
         // Wait until that's done
-        ViewManager.GetView<Dialogue>().WakeTri(false);
         ViewManager.Show<Standard>(false);
-
-
-        // Move the players back to a resumable spot
 
         // Blend the camera back to main camera
         _mainCamera.gameObject.SetActive(true);
 
         yield return new WaitForSeconds(2f);
 
-        // Return control to the player
+        // Return control to the player ---------------------------------------------------------
         GameManager.Instance._currentGameState = GameManager.GameState.Gameplay;
+
+        _p1Follow.SetGoal(_oldP1);
+        _p2Follow.SetGoal(_oldP2);
+
+        if (_wasP1Leader)
+        {
+
+            _p1Move.enabled = true;
+
+            _p1Follow.enabled = false;
+            _p1Agent.enabled = false;
+        }
+        else
+        {
+            _p2Move.enabled = true;
+
+            _p2Follow.enabled = false;
+            _p2Agent.enabled = false;
+        }
 
         _activeCoroutine = false;
         Destroy(gameObject);

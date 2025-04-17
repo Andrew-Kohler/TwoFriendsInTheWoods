@@ -6,7 +6,10 @@ using TMPro;
 public class Dialogue : View
 {
     [SerializeField] private TextMeshProUGUI speechBubble;
-    [SerializeField] private TriTest tri;
+    [SerializeField] private GameObject _leftBubbleConnector;
+    [SerializeField] private GameObject _rightBubbleConnector;
+
+    private float _yLevel = 260.4f;
     public override void Initialize()
     {
       
@@ -23,12 +26,21 @@ public class Dialogue : View
         speechBubble.text = text;
     }
 
-    public void setBubbleConnector(Vector2 point)
+    public void setBubbleConnector(bool left, float xCoord)
     {
-        tri.SetPoint1(point);
-    }
-    public void WakeTri(bool awake)
-    {
-        tri.IsActive= awake;
+        if (left)
+        {
+            _leftBubbleConnector.SetActive(true);
+            _rightBubbleConnector.SetActive(false);
+
+            _leftBubbleConnector.transform.localPosition = new Vector2(xCoord, _yLevel);
+        }
+        else
+        {
+            _leftBubbleConnector.SetActive(false);
+            _rightBubbleConnector.SetActive(true);
+
+            _rightBubbleConnector.transform.localPosition = new Vector2(xCoord, _yLevel);
+        }
     }
 }

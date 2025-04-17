@@ -182,4 +182,14 @@ public class Follower : MonoBehaviour
 
         return _currentAction;
     }
+
+    public Transform GetGoal() // Gets the current goal point of the follower
+    {
+        return goal;
+    }
+
+    public void SetGoal(Transform newGoal)
+    {
+        goal = newGoal;
+    }
 }
