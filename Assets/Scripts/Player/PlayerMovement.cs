@@ -29,7 +29,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 _toMoveTowards;
 
     // Animation variables
-    public enum Direction { Forwards, ForwardsLeft, ForwardsRight, Left, Right, Backwards, BackwardsLeft, BackwardsRight };
+    public enum Direction { Forwards, ForwardsLeft, ForwardsRight, Left, Right, Backwards, BackwardsLeft, BackwardsRight, Null };
     public Direction _currentDir;
 
     public enum Action { Walk, Idle, JumpUp, JumpDown };

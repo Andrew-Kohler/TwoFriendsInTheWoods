@@ -15,6 +15,7 @@ public class InteractionController : MonoBehaviour
     [SerializeField] private Conversation _dialogue;
 
     // Player GameObjects
+    [Header("Player Objects")]
     [SerializeField, Tooltip ("Player 1")] private GameObject _p1;
     [SerializeField, Tooltip("Player 2")] private GameObject _p2;
 
@@ -22,20 +23,26 @@ public class InteractionController : MonoBehaviour
     private PlayerMovement _p1Move;
     private Follower _p1Follow;
     private NavMeshAgent _p1Agent;
+    private PlayerAnimatior _p1Anim;
 
     private PlayerMovement _p2Move;
     private Follower _p2Follow;
     private NavMeshAgent _p2Agent;
+    private PlayerAnimatior _p2Anim;
 
     private bool _wasP1Leader;
 
     // Points the characters will navigate to for cutscene
+    [Header("Player Interaction Positions")]
     [SerializeField] private Transform _character1InteractPoint;
     [SerializeField] private Transform _character2InteractPoint;
+
+    [Header("Player Interaction Directions")]
+    [SerializeField] private PlayerMovement.Direction _character1Dir;
+    [SerializeField] private PlayerMovement.Direction _character2Dir;
     [SerializeField] private ParticleSystem _sys;
 
     // Private variables
-    private bool _canInteract;
     private bool _activeCoroutine = false;
     bool isSkippingLine;
 
@@ -46,10 +53,12 @@ public class InteractionController : MonoBehaviour
         _p1Move = _p1.GetComponent<PlayerMovement>();
         _p1Follow = _p1.GetComponent<Follower>();
         _p1Agent = _p1.GetComponent<NavMeshAgent>();
+        _p1Anim = _p1.GetComponentInChildren<PlayerAnimatior>();
 
         _p2Move = _p2.GetComponent<PlayerMovement>();
         _p2Follow = _p2.GetComponent<Follower>();
         _p2Agent = _p2.GetComponent<NavMeshAgent>();
+        _p2Anim = _p2.GetComponentInChildren<PlayerAnimatior>();
     }
 
     // Update is called once per frame
@@ -66,6 +75,7 @@ public class InteractionController : MonoBehaviour
         _interactionCamera.gameObject.SetActive(true);
         _mainCamera.gameObject.SetActive(false);
 
+        // Turn off the particle system
         ParticleSystem.EmissionModule e = _sys.emission;
         e.rateOverTime = 0;
         GetComponent<MeshRenderer>().enabled = false;
@@ -92,12 +102,20 @@ public class InteractionController : MonoBehaviour
             _p2Agent.isStopped = false;
         }
 
+        // Save the old transforms of where both characters were going, and then give them new ones
         Transform _oldP1 = _p1Follow.GetGoal();
         Transform _oldP2 = _p2Follow.GetGoal();
         _p1Follow.SetGoal(_character1InteractPoint);
         _p2Follow.SetGoal(_character2InteractPoint);
+
+        // Tell them how to pose when they get there
+        _p1Anim.SetInteractionDir(_character1Dir);
+        _p2Anim.SetInteractionDir(_character2Dir);
+
+        // Wait for everything to happen
         yield return new WaitForSeconds(2f);
 
+        // Get the positions of the characters in terms of the screen so the speech bubbles work
         Vector3 chara1Raw = Camera.main.WorldToScreenPoint(_p1.transform.position);
         Vector2 chara1Screen = new Vector3(chara1Raw.x / Screen.width, chara1Raw.y / Screen.height);
         Vector3 chara2Raw = Camera.main.WorldToScreenPoint(_p2.transform.position);
@@ -155,6 +173,9 @@ public class InteractionController : MonoBehaviour
 
         // Return control to the player ---------------------------------------------------------
         GameManager.Instance._currentGameState = GameManager.GameState.Gameplay;
+
+        _p1Anim.SetInteractionDir(PlayerMovement.Direction.Null);
+        _p2Anim.SetInteractionDir(PlayerMovement.Direction.Null);
 
         _p1Follow.SetGoal(_oldP1);
         _p2Follow.SetGoal(_oldP2);

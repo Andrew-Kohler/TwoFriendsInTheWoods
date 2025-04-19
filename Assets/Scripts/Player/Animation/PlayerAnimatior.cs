@@ -39,6 +39,8 @@ public class PlayerAnimatior : MonoBehaviour
 
     public bool standStill = false;         // A bool to make the player quit their moving when something important is happening
 
+    private PlayerMovement.Direction _interactionDir = PlayerMovement.Direction.Null;
+
     #region ANIM INDICIES
     private int _IdleIndex = 16;
 
@@ -122,8 +124,19 @@ public class PlayerAnimatior : MonoBehaviour
         }
         else
         {
-            _animDir = _pFollower.GetDirection();
             _pAction = _pFollower.GetAction();
+            if (GameManager.Instance._currentGameState == GameManager.GameState.Interaction)
+            {
+                if(_interactionDir != PlayerMovement.Direction.Null && _pAction != PlayerMovement.Action.Walk)
+                {
+                    _animDir = _interactionDir;
+                }
+            }
+            else
+            {
+                _animDir = _pFollower.GetDirection();
+            }
+            
         }
 
 
@@ -430,6 +443,11 @@ public class PlayerAnimatior : MonoBehaviour
             if (frame == 6)
                 audioSource.PlayOneShot(playerSounds[18], GameManager.Instance.entityVolume * GameManager.Instance.masterVolume);
         }*/
+    }
+
+    public void SetInteractionDir(PlayerMovement.Direction dir)
+    {
+        _interactionDir = dir;
     }
 
     #region GAME STATE HELPERS

@@ -87,7 +87,6 @@ public class PlayerController : MonoBehaviour
     private IEnumerator DoInitial()
     {
         yield return new WaitForEndOfFrame();
-        Debug.Log(GameManager.P1Leading);
         if (GameManager.P1Leading)
         {
             if (this.gameObject.name == "P1")

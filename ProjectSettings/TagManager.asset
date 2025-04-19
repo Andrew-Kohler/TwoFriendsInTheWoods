@@ -7,6 +7,7 @@ TagManager:
   - Terrain
   - Cam_V-Main
   - Cam_V-Angle
+  - P1_Wake
   layers:
   - Default
   - TransparentFX

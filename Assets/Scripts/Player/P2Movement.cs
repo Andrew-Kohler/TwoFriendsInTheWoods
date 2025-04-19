@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class P2Movement : PlayerMovement
 {
@@ -8,6 +9,7 @@ public class P2Movement : PlayerMovement
     [SerializeField] private Rigidbody _player1RB;
     [SerializeField] private Transform _player1TF;
     [SerializeField] private Follower _player1Follower;
+    [SerializeField] private NavMeshAgent _player1Agent;
 
     [Header("P2 Values")]
     [SerializeField] private Transform _holdTF;
@@ -47,7 +49,10 @@ public class P2Movement : PlayerMovement
         {
             currMoveSpeed = _holdSpeed;
             _holding = true;
+
             _player1Follower.Navigate = false;
+            //_player1Agent.isStopped = true;
+
             _player1TF.position = _holdTF.position;
             _player1RB.velocity = Vector3.zero;
             _angleCam.SetActive(true);
@@ -107,6 +112,17 @@ public class P2Movement : PlayerMovement
             default:
                 _player1RB.AddForce(new Vector3(0f, 15f, 0f), ForceMode.Impulse);
                 break;
+        }
+    }
+
+    // Allows P2 to wake up P1 with a tap
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("P1_Wake"))
+        {
+            _player1Agent.nextPosition = _player1Agent.transform.position; // Stop any snapping before bringing P1 back to life
+            _player1Follower.Navigate = true;
+            //_player1Agent.isStopped = false;
         }
     }
 }
