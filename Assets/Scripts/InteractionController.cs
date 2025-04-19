@@ -26,6 +26,7 @@ public class InteractionController : MonoBehaviour
     private PlayerAnimatior _p1Anim;
 
     private PlayerMovement _p2Move;
+    private P2Movement _p2Special;
     private Follower _p2Follow;
     private NavMeshAgent _p2Agent;
     private PlayerAnimatior _p2Anim;
@@ -59,6 +60,7 @@ public class InteractionController : MonoBehaviour
         _p2Follow = _p2.GetComponent<Follower>();
         _p2Agent = _p2.GetComponent<NavMeshAgent>();
         _p2Anim = _p2.GetComponentInChildren<PlayerAnimatior>();
+        _p2Special = _p2.GetComponent<P2Movement>();
     }
 
     // Update is called once per frame
@@ -210,7 +212,10 @@ public class InteractionController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player") && !_activeCoroutine)
+        // If it's a player
+        // If an interaction is not ongoing
+        // If they aren't using their special abilities
+        if (other.CompareTag("Player") && !_activeCoroutine && !Input.GetButton("Ability"))
         {
             StartCoroutine(DoInteraction());
             _activeCoroutine = true;

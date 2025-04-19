@@ -25,7 +25,7 @@ public class P2Movement : PlayerMovement
 
     private float _holdResetTimer;
 
-    private bool _holding;
+    public bool Holding;
     new void Start()
     {
         base.Start();
@@ -48,7 +48,7 @@ public class P2Movement : PlayerMovement
         if (Input.GetButton("Ability") && Vector3.Distance(this.transform.position, _player1TF.position) < 4f && _holdResetTimer <= 0)
         {
             currMoveSpeed = _holdSpeed;
-            _holding = true;
+            Holding = true;
 
             _player1Follower.Navigate = false;
             //_player1Agent.isStopped = true;
@@ -59,11 +59,11 @@ public class P2Movement : PlayerMovement
             _mainCam.SetActive(false);
 
         }
-        else if(!Input.GetButton("Ability") && _holding)
+        else if(!Input.GetButton("Ability") && Holding)
         {
             _player1RB.constraints = RigidbodyConstraints.FreezeRotation;
             ThrowInDirection();
-            _holding = false;
+            Holding = false;
             _holdResetTimer = _holdResetTime;
             _mainCam.SetActive(true);
             _angleCam.SetActive(false);
@@ -121,8 +121,7 @@ public class P2Movement : PlayerMovement
         if (other.CompareTag("P1_Wake"))
         {
             _player1Agent.nextPosition = _player1Agent.transform.position; // Stop any snapping before bringing P1 back to life
-            _player1Follower.Navigate = true;
-            //_player1Agent.isStopped = false;
+            _player1Follower.Navigate = true;   
         }
     }
 }

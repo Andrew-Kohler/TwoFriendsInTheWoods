@@ -223,6 +223,8 @@ MonoBehaviour:
   _p2: {fileID: 0}
   _character1InteractPoint: {fileID: 3615565341246949479}
   _character2InteractPoint: {fileID: 5173173656763730086}
+  _character1Dir: 0
+  _character2Dir: 0
   _sys: {fileID: 5283126162313913493}
 --- !u!1 &4207469146854737154
 GameObject:
@@ -271,7 +273,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5357437130748865266
 Transform:
   m_ObjectHideFlags: 0
