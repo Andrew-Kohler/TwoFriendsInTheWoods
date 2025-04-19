@@ -15,17 +15,18 @@ public class GameManager : MonoBehaviour
     public enum GameState { Gameplay, Interaction, Pause, Load };
     public GameState _currentGameState;
 
+    public static bool P1Leading;
+
+    private static void DefaultData()
+    {
+        P1Leading = true;
+    }
 
     #region SETTINGS VALUES
     private float _volumeMain = 1;
     private float _volumeAmbient = 1;
     private float _volumeText = 1;
     #endregion
-
-    private GameManager()
-    {
-        
-    }
 
     public static GameManager Instance
     {
@@ -36,7 +37,8 @@ public class GameManager : MonoBehaviour
                 GameObject managerHolder = new GameObject("[Game Manager]");
                 managerHolder.AddComponent<GameManager>();
                 DontDestroyOnLoad(managerHolder);
-                //_instance = managerHolder.GetComponent<GameManager>();          
+                _instance = managerHolder.GetComponent<GameManager>();
+                DefaultData();
             }
 
             return _instance;
@@ -45,7 +47,7 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        _instance = this;
+        //_instance = this;
     }
 
     // Update is called once per frame

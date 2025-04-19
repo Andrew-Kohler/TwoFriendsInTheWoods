@@ -213,21 +213,29 @@ PrefabInstance:
       propertyPath: m_Name
       value: P1
       objectReference: {fileID: 0}
+    - target: {fileID: 3440909650480086930, guid: 2294718682af47742a61b473936637a8, type: 3}
+      propertyPath: _currentDir
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3440909650480086930, guid: 2294718682af47742a61b473936637a8, type: 3}
+      propertyPath: _currentAction
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4729202721682376770, guid: 2294718682af47742a61b473936637a8, type: 3}
       propertyPath: goal
       value: 
       objectReference: {fileID: 8406549695747389061}
     - target: {fileID: 5931022045501719766, guid: 2294718682af47742a61b473936637a8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 121.630005
+      value: -1.61
       objectReference: {fileID: 0}
     - target: {fileID: 5931022045501719766, guid: 2294718682af47742a61b473936637a8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.48
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5931022045501719766, guid: 2294718682af47742a61b473936637a8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10.2300005
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5931022045501719766, guid: 2294718682af47742a61b473936637a8, type: 3}
       propertyPath: m_LocalRotation.w
@@ -298,15 +306,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1855300907291591003, guid: e8d9d15c9a18ed847a2bf4a4711f7f55, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 121.69
+      value: 0.92
       objectReference: {fileID: 0}
     - target: {fileID: 1855300907291591003, guid: e8d9d15c9a18ed847a2bf4a4711f7f55, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.48
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1855300907291591003, guid: e8d9d15c9a18ed847a2bf4a4711f7f55, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -13.61
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1855300907291591003, guid: e8d9d15c9a18ed847a2bf4a4711f7f55, type: 3}
       propertyPath: m_LocalRotation.w
@@ -352,6 +360,14 @@ PrefabInstance:
       propertyPath: _player1TF
       value: 
       objectReference: {fileID: 6077036673309499186}
+    - target: {fileID: 5612398307442045113, guid: e8d9d15c9a18ed847a2bf4a4711f7f55, type: 3}
+      propertyPath: _currentDir
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5612398307442045113, guid: e8d9d15c9a18ed847a2bf4a4711f7f55, type: 3}
+      propertyPath: _currentAction
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5612398307442045113, guid: e8d9d15c9a18ed847a2bf4a4711f7f55, type: 3}
       propertyPath: _player1Follower
       value: 

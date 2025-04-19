@@ -33,6 +33,14 @@ public class Follower : MonoBehaviour
     private void Update()
     {
         // Debug.Log(agent.pathStatus);
+        if (GameManager.Instance._currentGameState == GameManager.GameState.Load){
+            agent.isStopped = true;
+        }
+        else
+        {
+            agent.isStopped = false;
+        }
+
         agent.destination = goal.position;
         if (agent.pathStatus != NavMeshPathStatus.PathPartial)
         {

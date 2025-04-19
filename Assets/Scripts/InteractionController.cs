@@ -55,10 +55,6 @@ public class InteractionController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!_activeCoroutine && _canInteract && Input.GetButtonDown("Interact"))
-        {
-            StartCoroutine(DoInteraction());
-        }
     }
 
     private IEnumerator DoInteraction()
@@ -83,6 +79,7 @@ public class InteractionController : MonoBehaviour
 
             _p1Follow.enabled = true;
             _p1Agent.enabled = true;
+            _p1Agent.isStopped = false;
         }
         else
         {
@@ -92,6 +89,7 @@ public class InteractionController : MonoBehaviour
 
             _p2Follow.enabled = true;
             _p2Agent.enabled = true;
+            _p2Agent.isStopped = false;
         }
 
         Transform _oldP1 = _p1Follow.GetGoal();
@@ -167,14 +165,14 @@ public class InteractionController : MonoBehaviour
             _p1Move.enabled = true;
 
             _p1Follow.enabled = false;
-            _p1Agent.enabled = false;
+            _p1Agent.isStopped = true;
         }
         else
         {
             _p2Move.enabled = true;
 
             _p2Follow.enabled = false;
-            _p2Agent.enabled = false;
+            _p2Agent.isStopped = true;
         }
 
         _activeCoroutine = false;
@@ -189,19 +187,12 @@ public class InteractionController : MonoBehaviour
         isSkippingLine = true;
     }
 
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && !_activeCoroutine)
         {
-            _canInteract = true;
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            _canInteract = false;
+            StartCoroutine(DoInteraction());
+            _activeCoroutine = true;
         }
     }
 

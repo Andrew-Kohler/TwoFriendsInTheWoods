@@ -32,19 +32,9 @@ public class PlayerController : MonoBehaviour
 
         _cam = GameObject.FindWithTag("Cam_V-Main").GetComponent<CinemachineVirtualCamera>();
 
-        if (_pMovement.enabled)
-        {
-            _agent.isStopped = true;
-            _agent.enabled = false;
-            _follower.enabled = false;
-            _linkMover.enabled = false;
-        }
-        else
-        {
-            _agent.isStopped = false;
-            _follower.enabled = true;
-            _linkMover.enabled = true;
-        }
+        // Determines who the player controls on the next scene load
+        StartCoroutine(DoInitial());
+        
     }
 
     // Update is called once per frame
@@ -60,9 +50,10 @@ public class PlayerController : MonoBehaviour
     private void ToggleActivePlayer()
     {
         _pMovement.enabled = !_pMovement.enabled;
-       //_pointMover.enabled = !_pMovement.enabled;
-       if(_pMovement.enabled)
+        //_pointMover.enabled = !_pMovement.enabled;
+        if (_pMovement.enabled)
         {
+            GameManager.P1Leading = !GameManager.P1Leading;
             _agent.isStopped = true;
             _follower.enabled = false;
             _linkMover.enabled = false;
@@ -91,5 +82,43 @@ public class PlayerController : MonoBehaviour
             
         }
 
+    }
+
+    private IEnumerator DoInitial()
+    {
+        yield return new WaitForEndOfFrame();
+        Debug.Log(GameManager.P1Leading);
+        if (GameManager.P1Leading)
+        {
+            if (this.gameObject.name == "P1")
+                _pMovement.enabled = true;
+            else
+                _pMovement.enabled = false;
+        }
+        else
+        {
+            if (this.gameObject.name == "P1")
+                _pMovement.enabled = false;
+            else
+                _pMovement.enabled = true;
+        }
+
+
+        if (_pMovement.enabled)
+        {
+            _agent.isStopped = true;
+            _agent.enabled = false;
+            _follower.enabled = false;
+            _linkMover.enabled = false;
+
+            _cam.Follow = this.gameObject.transform;
+            _cam.LookAt = this.gameObject.transform;
+        }
+        else
+        {
+            _agent.isStopped = false;
+            _follower.enabled = true;
+            _linkMover.enabled = true;
+        }
     }
 }
