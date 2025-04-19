@@ -9,10 +9,14 @@ public class EnableStairs : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] GameObject newTerrain;
+    [SerializeField] GameObject oldTerrain;
     [SerializeField] NavMeshLinkData data;
 
-    [SerializeField] GameObject mainCam;
+    [SerializeField] private GameObject _mainCam;
     [SerializeField] GameObject newCam;
+    [SerializeField] private float _time = 4f;
+
+    [SerializeField] private ParticleSystem _sys;
     void Start()
     {
 
@@ -27,18 +31,23 @@ public class EnableStairs : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         newTerrain.SetActive(true);
+        oldTerrain.SetActive(false);
+
+        // Turn everything off
         GetComponent<BoxCollider>().enabled = false;
-        GetComponentInChildren<MeshRenderer>().enabled = false;
+        GetComponent<MeshRenderer>().enabled = false;
+        ParticleSystem.EmissionModule e = _sys.emission;
+        e.rateOverTime = 0;
 
         StartCoroutine(DoCam());
     }
 
     IEnumerator DoCam()
     {
-        mainCam.SetActive(false);
+        _mainCam.SetActive(false);
         newCam.SetActive(true);
-        yield return new WaitForSeconds(4f);
-        mainCam.SetActive(true);
+        yield return new WaitForSeconds(_time);
+        _mainCam.SetActive(true);
         newCam.SetActive(false);
     }
 }
