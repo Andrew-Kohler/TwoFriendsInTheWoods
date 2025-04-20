@@ -89,7 +89,9 @@ public class InteractionController : MonoBehaviour
 
             _p1Move.enabled = false;
 
+            _p1Follow.UpdateCurrentPosition();
             _p1Follow.enabled = true;
+            
             _p1Agent.enabled = true;
             _p1Agent.isStopped = false;
         }
@@ -99,7 +101,10 @@ public class InteractionController : MonoBehaviour
 
             _p2Move.enabled = false;
 
+            _p2Follow.UpdateCurrentPosition();
             _p2Follow.enabled = true;
+            
+
             _p2Agent.enabled = true;
             _p2Agent.isStopped = false;
         }

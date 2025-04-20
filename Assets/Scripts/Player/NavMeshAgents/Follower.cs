@@ -27,6 +27,7 @@ public class Follower : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         agent.nextPosition = this.transform.position;
+        agent.Warp(this.gameObject.transform.position);
         Navigate = true;
     }
 
@@ -199,5 +200,11 @@ public class Follower : MonoBehaviour
     public void SetGoal(Transform newGoal)
     {
         goal = newGoal;
+    }
+
+    public void UpdateCurrentPosition()
+    {
+        agent.nextPosition = this.transform.position;
+        agent.Warp(this.gameObject.transform.position);
     }
 }
