@@ -24,12 +24,14 @@ public class InteractionController : MonoBehaviour
     private Follower _p1Follow;
     private NavMeshAgent _p1Agent;
     private PlayerAnimatior _p1Anim;
+    private AgentLinkMover _p1LinkMover;
 
     private PlayerMovement _p2Move;
     private P2Movement _p2Special;
     private Follower _p2Follow;
     private NavMeshAgent _p2Agent;
     private PlayerAnimatior _p2Anim;
+    private AgentLinkMover _p2LinkMover;
 
     private bool _wasP1Leader;
 
@@ -55,12 +57,14 @@ public class InteractionController : MonoBehaviour
         _p1Follow = _p1.GetComponent<Follower>();
         _p1Agent = _p1.GetComponent<NavMeshAgent>();
         _p1Anim = _p1.GetComponentInChildren<PlayerAnimatior>();
+        _p1LinkMover = _p1.GetComponent<AgentLinkMover>();
 
         _p2Move = _p2.GetComponent<PlayerMovement>();
         _p2Follow = _p2.GetComponent<Follower>();
         _p2Agent = _p2.GetComponent<NavMeshAgent>();
         _p2Anim = _p2.GetComponentInChildren<PlayerAnimatior>();
         _p2Special = _p2.GetComponent<P2Movement>();
+        _p2LinkMover = _p2.GetComponent<AgentLinkMover>();
     }
 
     // Update is called once per frame
@@ -94,6 +98,7 @@ public class InteractionController : MonoBehaviour
             
             _p1Agent.enabled = true;
             _p1Agent.isStopped = false;
+            _p1LinkMover.enabled = true;
         }
         else
         {
@@ -107,6 +112,7 @@ public class InteractionController : MonoBehaviour
 
             _p2Agent.enabled = true;
             _p2Agent.isStopped = false;
+            _p2LinkMover.enabled = true;
         }
 
         // Save the old transforms of where both characters were going, and then give them new ones
@@ -194,6 +200,8 @@ public class InteractionController : MonoBehaviour
 
             _p1Follow.enabled = false;
             _p1Agent.isStopped = true;
+
+            _p1LinkMover.enabled = false;
         }
         else
         {
@@ -201,6 +209,8 @@ public class InteractionController : MonoBehaviour
 
             _p2Follow.enabled = false;
             _p2Agent.isStopped = true;
+
+            _p2LinkMover.enabled = false;
         }
 
         _activeCoroutine = false;
