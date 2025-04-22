@@ -45,12 +45,16 @@ public class Follower : MonoBehaviour
         agent.destination = goal.position;
         if (agent.pathStatus != NavMeshPathStatus.PathPartial)
         {
-            
+            GameManager.CanLoadAgent = true;
             // Debug.Log(Mathf.Abs(Vector3.Distance(goal.position, this.transform.position)));
             if (Mathf.Abs(Vector3.Distance(goal.position, this.transform.position)) < StopDistance)
                 _rb.useGravity = false;
             else
                 _rb.useGravity = true;
+        }
+        else
+        {
+            GameManager.CanLoadAgent = false;
         }
 
         // Grounded check here exists purely for animation purposes
@@ -204,6 +208,7 @@ public class Follower : MonoBehaviour
 
     public void UpdateCurrentPosition()
     {
+        agent = GetComponent<NavMeshAgent>();
         agent.nextPosition = this.transform.position;
         agent.Warp(this.gameObject.transform.position);
     }

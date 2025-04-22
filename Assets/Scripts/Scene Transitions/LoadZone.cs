@@ -18,10 +18,13 @@ public class LoadZone : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && GameManager.CanLoadAgent && !Input.GetButton("Ability"))
         {
-            ViewManager.Show<Transition>(false);
-            _loader.LoadNextScene();
+            if(other.GetComponentInParent<PlayerMovement>().enabled){
+                ViewManager.Show<Transition>(false);
+                _loader.LoadNextScene();
+            }
+            
         }
     }
 }

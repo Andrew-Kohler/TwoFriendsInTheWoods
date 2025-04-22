@@ -30,16 +30,24 @@ public class EnableStairs : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        newTerrain.SetActive(true);
-        oldTerrain.SetActive(false);
+        if (other.CompareTag("Player") && !Input.GetButton("Ability"))
+        {
+            if (other.GetComponentInParent<PlayerMovement>().enabled)
+            {
+                newTerrain.SetActive(true);
+                oldTerrain.SetActive(false);
 
-        // Turn everything off
-        GetComponent<BoxCollider>().enabled = false;
-        GetComponent<MeshRenderer>().enabled = false;
-        ParticleSystem.EmissionModule e = _sys.emission;
-        e.rateOverTime = 0;
+                // Turn everything off
+                GetComponent<BoxCollider>().enabled = false;
+                GetComponent<MeshRenderer>().enabled = false;
+                ParticleSystem.EmissionModule e = _sys.emission;
+                e.rateOverTime = 0;
 
-        StartCoroutine(DoCam());
+                StartCoroutine(DoCam());
+            }
+            
+        }
+        
     }
 
     IEnumerator DoCam()

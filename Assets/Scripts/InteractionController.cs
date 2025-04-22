@@ -220,10 +220,16 @@ public class InteractionController : MonoBehaviour
         // If it's a player
         // If an interaction is not ongoing
         // If they aren't using their special abilities
-        if (other.CompareTag("Player") && !_activeCoroutine && !Input.GetButton("Ability"))
+        // If the follower isn't trapped on the other side of something
+        // If this is the player the player has control over
+        if (other.CompareTag("Player") && !_activeCoroutine && !Input.GetButton("Ability") && GameManager.CanLoadAgent)
         {
-            StartCoroutine(DoInteraction());
-            _activeCoroutine = true;
+            if (other.GetComponentInParent<PlayerMovement>().enabled)
+            {
+                StartCoroutine(DoInteraction());
+                _activeCoroutine = true;
+            }
+            
         }
     }
 

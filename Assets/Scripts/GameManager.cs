@@ -16,10 +16,12 @@ public class GameManager : MonoBehaviour
     public GameState _currentGameState;
 
     public static bool P1Leading;
+    public static bool CanLoadAgent; // Whether the characters are together and we can move along
 
     private static void DefaultData()
     {
         P1Leading = true;
+        CanLoadAgent = true;
     }
 
     #region SETTINGS VALUES
