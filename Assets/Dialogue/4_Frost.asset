@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd5aea12658478c47af74513d55cde51, type: 3}
+  m_Name: 4_Frost
+  m_EditorClassIdentifier: 
+  lines:
+  - What's up?
+  - Sorry, just..
+  - I always wanted to do that trail. The longer one.
+  - Oh.
+  - ...
+  - ...
+  bubbleChara1: 010000010001
