@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd5aea12658478c47af74513d55cde51, type: 3}
+  m_Name: 6_Fence
+  m_EditorClassIdentifier: 
+  lines:
+  - Well, shoot. This is new too.
+  - Why is it even here?
+  - To stop us, apparently. Barbed wire on the top and all.
+  - Won't budge. Of course they put it up just to let it rust.
+  - ...
+  - Well, I guess that's it. At least we got to see the view.
+  - ...
+  - Crawl under.
+  - Huh?
+  - Look, the gate's torn up down there - I'm too big, but you could make it.
+  - Huh. Yeah, alright, let's try it. Look at you, breaking rules! That's new!
+  - Pff. There's nobody out here. Besides, you...
+  - ...you should get to see this one through.
+  bubbleChara1: 00010000000001010001000101

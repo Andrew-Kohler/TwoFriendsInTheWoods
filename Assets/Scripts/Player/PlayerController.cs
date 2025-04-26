@@ -41,7 +41,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         _rb.useGravity = true;
-        if (Input.GetButtonDown("Swap") && !(GameManager.Instance._currentGameState == GameManager.GameState.Interaction))
+        if (Input.GetButtonDown("Swap") && !Input.GetButton("Ability") && !(GameManager.Instance._currentGameState == GameManager.GameState.Interaction))
         {
             ToggleActivePlayer();
         }

@@ -45,7 +45,7 @@ public class P2Movement : PlayerMovement
             _holdResetTimer -= Time.deltaTime;
         }
 
-        if (Input.GetButton("Ability") && Vector3.Distance(this.transform.position, _player1TF.position) < 4f && _holdResetTimer <= 0)
+        if (Input.GetButton("Ability") && Vector3.Distance(this.transform.position, _player1TF.position) < 4f && _holdResetTimer <= 0 && _player1Agent.pathStatus != NavMeshPathStatus.PathPartial)
         {
             currMoveSpeed = _holdSpeed;
             Holding = true;
