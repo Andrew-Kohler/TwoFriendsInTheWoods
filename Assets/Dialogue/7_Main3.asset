@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd5aea12658478c47af74513d55cde51, type: 3}
+  m_Name: 7_Main3
+  m_EditorClassIdentifier: 
+  lines:
+  - How's your family doing?
+  - Not great. I think all any of them can think about is how much longer they've
+    got me.
+  - Yeah, that makes sense.
+  - I've been telling them it's ok, you know? That being scared is a waste of time.
+  - You aren't scared?
+  - Are you kidding? I'm terrified.
+  - You don't look like you are.
+  - ...
+  - Well, people say I hide it well.
+  - Heh.
+  - What?
+  - Something we still have in common.
+  - ...
+  - ...
+  - So, how's your family?
+  - They're doing alright.
+  - ...
+  - I...
+  - I have a kid now.
+  - What?! That's wonderful, congratulations! Since when?
+  - She was born a few months ago. Her name's Sarah.
+  - Aw, that's amazing. I'm so happy for you!
+  - ...
+  - Why didn't you send me anything? A card, a text? I would have sent a gift.
+  - I thought about it, but...
+  - ...
+  - I dunno. You were so far away.
+  - ...
+  - I guess I was.
+  - Sorry for not calling more. I... I wish I had.
+  - Me too.
+  bubbleChara1: 01000100010001000001000100010001010101000100000001010100000001

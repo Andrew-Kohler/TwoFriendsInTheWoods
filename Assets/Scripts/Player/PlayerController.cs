@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using Cinemachine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -68,7 +69,7 @@ public class PlayerController : MonoBehaviour
 
         
 
-        if (_pMovement.enabled)
+        if (_pMovement.enabled && SceneManager.GetActiveScene().name != "Area8")
         {
             _cam.Follow = this.gameObject.transform;
             _cam.LookAt = this.gameObject.transform;
@@ -110,8 +111,12 @@ public class PlayerController : MonoBehaviour
             _follower.enabled = false;
             _linkMover.enabled = false;
 
-            _cam.Follow = this.gameObject.transform;
-            _cam.LookAt = this.gameObject.transform;
+            if(SceneManager.GetActiveScene().name != "Area8")
+            {
+                _cam.Follow = this.gameObject.transform;
+                _cam.LookAt = this.gameObject.transform;
+            }
+            
         }
         else
         {
