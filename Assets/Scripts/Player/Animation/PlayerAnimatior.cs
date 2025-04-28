@@ -84,17 +84,6 @@ public class PlayerAnimatior : MonoBehaviour
     private PlayerMovement.Direction _animDir;
     private PlayerMovement.Action _pAction;
 
-    // All of the event controls that trigger special animations
-    private void OnEnable()
-    {
-
-    }
-
-    private void OnDisable()
-    {
-
-    }
-
     private void Start()
     {
         meshRenderer = GetComponent<MeshRenderer>();
@@ -307,7 +296,7 @@ public class PlayerAnimatior : MonoBehaviour
 
             else if (IsLoad())
             {
-                animationSpeed = 1f;
+                animationSpeed = 0.01f;
                 _aIndex = _IdleIndex;
 
                 switch (_animDir)
@@ -342,6 +331,8 @@ public class PlayerAnimatior : MonoBehaviour
                 }
 
                 _frameLoop = _frameReset;
+                _frame = _frameReset;
+                deltaT = _frame / animationSpeed;
             }
 
             string clipKey, frameKey; 

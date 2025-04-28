@@ -20702,6 +20702,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Load Zone
       objectReference: {fileID: 0}
+    - target: {fileID: 7944860084152690963, guid: 15f056da30d811f4db50631f6e219a76, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7944860084152690963, guid: 15f056da30d811f4db50631f6e219a76, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7944860084152690963, guid: 15f056da30d811f4db50631f6e219a76, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9020760819845432171, guid: 15f056da30d811f4db50631f6e219a76, type: 3}
       propertyPath: nextSceneName
       value: Area4

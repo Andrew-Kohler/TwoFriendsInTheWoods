@@ -43,7 +43,7 @@ public class Follower : MonoBehaviour
         }
 
         agent.destination = goal.position;
-        if (agent.pathStatus != NavMeshPathStatus.PathPartial)
+        if (agent.pathStatus != NavMeshPathStatus.PathPartial && Navigate)
         {
             GameManager.CanLoadAgent = true;
             // Debug.Log(Mathf.Abs(Vector3.Distance(goal.position, this.transform.position)));

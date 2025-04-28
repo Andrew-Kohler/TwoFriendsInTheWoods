@@ -14,4 +14,15 @@ public class Pause : View
     {
         
     }
+
+    public void Resume()
+    {
+        Time.timeScale = 1f;
+        ViewManager.ShowLast();
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
+    }
 }

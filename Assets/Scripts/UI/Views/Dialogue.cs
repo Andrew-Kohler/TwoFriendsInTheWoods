@@ -8,6 +8,7 @@ public class Dialogue : View
     [SerializeField] private TextMeshProUGUI speechBubble;
     [SerializeField] private GameObject _leftBubbleConnector;
     [SerializeField] private GameObject _rightBubbleConnector;
+    [SerializeField] private GameObject _spaceBar;
 
     private float _yLevel = 260.4f;
     public override void Initialize()
@@ -24,6 +25,11 @@ public class Dialogue : View
     public void setText(string text)
     {
         speechBubble.text = text;
+    }
+
+    public void setSpaceBar(bool truth)
+    {
+        _spaceBar.SetActive(truth);
     }
 
     public void setBubbleConnector(bool left, float xCoord)

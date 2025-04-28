@@ -13345,7 +13345,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 237960137}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 8aceb9ed3bfdbc94eb069f5f292e8ba0, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -64839,7 +64839,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1152949956}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 8aceb9ed3bfdbc94eb069f5f292e8ba0, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -111158,7 +111158,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1933747468}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 8aceb9ed3bfdbc94eb069f5f292e8ba0, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -112103,6 +112103,18 @@ PrefabInstance:
     - target: {fileID: 3540971624382524834, guid: 15f056da30d811f4db50631f6e219a76, type: 3}
       propertyPath: m_Name
       value: Load Zone
+      objectReference: {fileID: 0}
+    - target: {fileID: 7944860084152690963, guid: 15f056da30d811f4db50631f6e219a76, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7944860084152690963, guid: 15f056da30d811f4db50631f6e219a76, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7944860084152690963, guid: 15f056da30d811f4db50631f6e219a76, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9020760819845432171, guid: 15f056da30d811f4db50631f6e219a76, type: 3}
       propertyPath: nextSceneName

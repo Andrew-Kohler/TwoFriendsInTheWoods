@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd5aea12658478c47af74513d55cde51, type: 3}
+  m_Name: 9_End
+  m_EditorClassIdentifier: 
+  lines:
+  - Well, at least part of this trail stayed the same! Beacon Falls, in all her glory.
+  - "Wow\u2026 even with all the stuff on the trail, I\u2019m surprised we\u2019re
+    the only ones here."
+  - "That\u2019s the same too. This was always a trail for the curious and the lost."
+  - "My family and I were both the first time we found it!\r"
+  - "Hah\u2026well, it was worth it."
+  - ...
+  - ...
+  - "I\u2026"
+  - "I keep thinking about how when I\u2019m gone, nobody will ever look at this
+    place like me again.\r"
+  - Yeah?
+  - "Yeah, it\u2019s just\u2026it sounds selfish, or self-righteous. Both, probably.
+    But all those things I told you I saw, and felt\u2026"
+  - Dying's one thing. I can accept that even if it's scary.
+  - "But I\u2019m sad about all the thoughts and dreams I\u2019m leaving behind,
+    and I wish I knew there was someone out there who dreamt like me."
+  - ...
+  - "Isn\u2019t what makes us all special is that nobody dreams like you?"
+  - "Heh. Yeah, I guess you\u2019re right."
+  - But I love what I dream so much, and I guess what I really want is for someone
+    else to know that love.
+  - Hmm.
+  - ...
+  - By your own logic, I think a lot of people do. They love their dreams just as
+    much, and a little bit differently. Like the valley.
+  - ...
+  - "Yeah, that\u2026that makes sense."
+  - ...
+  - Thanks for coming with me.
+  - "Yeah, of course, it was\u2026\r"
+  - "...\r"
+  - "I, uh...\r"
+  - "...\r"
+  - "*sniff*\r"
+  - "Hey, hey, it\u2019s alright. It\u2019s ok."
+  - "Y-yeah, I\u2019m\u2026"
+  - "I just thought about how I\u2019ll always think of you when I think about this
+    place, now."
+  - "I don\u2019t know whether that\u2019s a sad thing or a happy one."
+  - ...
+  - Happy.
+  - Y-you're pretty sure for someone who's dying.
+  - "It means I\u2019m part of it. Part of the sky, and the rock, and the valleys.
+    Like the traveller in that poem you mentioned - I\u2019m part of the sea."
+  - Home, forevermore.
+  - "I don\u2019t think I could ask for much better."
+  - ...
+  - '*sniff*'
+  - Y-yeah. That sounds happy.
+  - ...
+  - ...
+  - ...Do you wanna get lunch after this?
+  - Hah. Yeah, I think so. That sounds good.
+  - Do you wanna stay and watch the falls a bit longer?
+  - Actually...
+  - I think I'm ready to go.
+  bubbleChara1: 00010000010100000001000000010100000101010000000001010101010001010100000100000001010100010001010000

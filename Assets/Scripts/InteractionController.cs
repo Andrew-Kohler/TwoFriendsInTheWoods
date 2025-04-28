@@ -13,6 +13,10 @@ public class InteractionController : MonoBehaviour
     private CinemachineVirtualCamera _mainCamera;
 
     [SerializeField] private Conversation _dialogue;
+    [Header("Final Interaction")]
+    [SerializeField] private bool _endGame = false;
+    [SerializeField] private SceneLoader _sceneLoader;
+    [SerializeField] private CinemachineVirtualCamera _interactionCamera2;
 
     // Player GameObjects
     [Header("Player Objects")]
@@ -151,6 +155,7 @@ public class InteractionController : MonoBehaviour
             {
                 ViewManager.GetView<Dialogue>().setBubbleConnector(true, chara1XTrue);
             }
+            ViewManager.GetView<Dialogue>().setSpaceBar(false);
             StartCoroutine(DoTextEscapeSubroutine());
             for (int j = 0; j < _dialogue.lines[i].Length; j++)
             {
@@ -167,61 +172,77 @@ public class InteractionController : MonoBehaviour
                 else
                 {
                     ViewManager.GetView<Dialogue>().setText(_dialogue.lines[i]);
+                    ViewManager.GetView<Dialogue>().setSpaceBar(true);
                     break;
                 }
 
             }
             StopCoroutine(DoTextEscapeSubroutine());
             ViewManager.GetView<Dialogue>().setText(_dialogue.lines[i]);
-            yield return new WaitUntil(() => !Input.GetButtonDown("Interact")); // Make the player lift the button so they don't hold through
-            yield return new WaitUntil(() => Input.GetButtonDown("Interact"));
+            ViewManager.GetView<Dialogue>().setSpaceBar(true);
+            yield return new WaitUntil(() => !Input.GetButtonDown("Jump")); // Make the player lift the button so they don't hold through
+            yield return new WaitUntil(() => Input.GetButtonDown("Jump"));
         }
         // Wait until that's done
         ViewManager.Show<Standard>(false);
 
-        // Blend the camera back to main camera
-        _mainCamera.gameObject.SetActive(true);
-
-        yield return new WaitForSeconds(2f);
-
-        // Return control to the player ---------------------------------------------------------
-        GameManager.Instance._currentGameState = GameManager.GameState.Gameplay;
-
-        _p1Anim.SetInteractionDir(PlayerMovement.Direction.Null);
-        _p2Anim.SetInteractionDir(PlayerMovement.Direction.Null);
-
-        _p1Follow.SetGoal(_oldP1);
-        _p2Follow.SetGoal(_oldP2);
-
-        if (_wasP1Leader)
+        if (_endGame)
         {
-
-            _p1Move.enabled = true;
-
-            _p1Follow.enabled = false;
-            _p1Agent.isStopped = true;
-
-            _p1LinkMover.enabled = false;
+            
+            _interactionCamera2.gameObject.SetActive(true);
+            _interactionCamera.gameObject.SetActive(false);
+            yield return new WaitForSeconds(3f);
+            ViewManager.Show<Transition>(false);
+            _sceneLoader.LoadNextScene();
         }
         else
         {
-            _p2Move.enabled = true;
+            // Blend the camera back to main camera
+            _mainCamera.gameObject.SetActive(true);
 
-            _p2Follow.enabled = false;
-            _p2Agent.isStopped = true;
+            yield return new WaitForSeconds(2f);
 
-            _p2LinkMover.enabled = false;
+            // Return control to the player ---------------------------------------------------------
+            GameManager.Instance._currentGameState = GameManager.GameState.Gameplay;
+
+            _p1Anim.SetInteractionDir(PlayerMovement.Direction.Null);
+            _p2Anim.SetInteractionDir(PlayerMovement.Direction.Null);
+
+            _p1Follow.SetGoal(_oldP1);
+            _p2Follow.SetGoal(_oldP2);
+
+            if (_wasP1Leader)
+            {
+
+                _p1Move.enabled = true;
+
+                _p1Follow.enabled = false;
+                _p1Agent.isStopped = true;
+
+                _p1LinkMover.enabled = false;
+            }
+            else
+            {
+                _p2Move.enabled = true;
+
+                _p2Follow.enabled = false;
+                _p2Agent.isStopped = true;
+
+                _p2LinkMover.enabled = false;
+            }
+
+            _activeCoroutine = false;
+            Destroy(gameObject);
         }
 
-        _activeCoroutine = false;
-        Destroy(gameObject);
+        
         yield return null;  
     }
 
     private IEnumerator DoTextEscapeSubroutine()
     {
-        yield return new WaitUntil(() => !Input.GetButtonDown("Interact")); // Make the player lift the button so they don't hold through
-        yield return new WaitUntil(() => Input.GetButtonDown("Interact"));
+        yield return new WaitUntil(() => !Input.GetButtonDown("Jump")); // Make the player lift the button so they don't hold through
+        yield return new WaitUntil(() => Input.GetButtonDown("Jump"));
         isSkippingLine = true;
     }
 
@@ -232,7 +253,7 @@ public class InteractionController : MonoBehaviour
         // If they aren't using their special abilities
         // If the follower isn't trapped on the other side of something
         // If this is the player the player has control over
-        if (other.CompareTag("Player") && !_activeCoroutine && !Input.GetButton("Ability") && GameManager.CanLoadAgent)
+        if (other.CompareTag("Player") && !_activeCoroutine && !Input.GetButton("Ability") && GameManager.CanLoadAgent && _p1Follow.Navigate == true)
         {
             if (other.GetComponentInParent<PlayerMovement>().enabled)
             {

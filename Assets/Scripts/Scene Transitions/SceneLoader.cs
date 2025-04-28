@@ -6,6 +6,10 @@ using UnityEngine.SceneManagement;
 public class SceneLoader : MonoBehaviour
 {
     [SerializeField] private string nextSceneName;
+
+    public delegate void OnLoadOut();
+    public static event OnLoadOut onLoadOut;
+
     void Start()
     {
         StartCoroutine(DoSceneLoadStart());
@@ -23,7 +27,9 @@ public class SceneLoader : MonoBehaviour
 
     private IEnumerator DoLoadNextScene() // Plays the animation and loads into the next scene
     {
+        onLoadOut?.Invoke();
         GameManager.Instance._currentGameState = GameManager.GameState.Load;
+        ViewManager.Show<Transition>(false);
         ViewManager.GetView<Transition>().PlaySceneExit();
         yield return new WaitForSeconds(1.33f);
         SceneManager.LoadScene(nextSceneName);
@@ -34,5 +40,6 @@ public class SceneLoader : MonoBehaviour
         ViewManager.Show<Transition>(false);
         yield return new WaitForSeconds(1.33f);
         GameManager.Instance._currentGameState = GameManager.GameState.Gameplay;
+        ViewManager.Show<Standard>(false);
     }
 }
