@@ -14087,7 +14087,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 708557198}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 8aceb9ed3bfdbc94eb069f5f292e8ba0, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -23132,7 +23132,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1256519505}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 8aceb9ed3bfdbc94eb069f5f292e8ba0, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -30900,7 +30900,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1649303905}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 8aceb9ed3bfdbc94eb069f5f292e8ba0, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -38544,7 +38544,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2022055406}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 8aceb9ed3bfdbc94eb069f5f292e8ba0, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -40957,6 +40957,14 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8559648212068237012, guid: fa3068275471b86418aafcba9e41c094, type: 3}
+      propertyPath: _signNum
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8981817555741156841, guid: fa3068275471b86418aafcba9e41c094, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8981817555741156841, guid: fa3068275471b86418aafcba9e41c094, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
@@ -41255,7 +41263,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
   m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 255.69406, y: 255.69406, z: 255.69406}
+  m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 543450653488917424}
@@ -41270,7 +41278,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
   m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 255.69406, y: 255.69406, z: 255.69406}
+  m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 543450653488917424}

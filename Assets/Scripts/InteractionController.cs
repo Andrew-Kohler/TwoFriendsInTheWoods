@@ -241,9 +241,14 @@ public class InteractionController : MonoBehaviour
 
     private IEnumerator DoTextEscapeSubroutine()
     {
-        yield return new WaitUntil(() => !Input.GetButtonDown("Jump")); // Make the player lift the button so they don't hold through
-        yield return new WaitUntil(() => Input.GetButtonDown("Jump"));
-        isSkippingLine = true;
+        if (GameManager.IsTapThru)
+        {
+            yield return new WaitUntil(() => !Input.GetButtonDown("Jump")); // Make the player lift the button so they don't hold through
+            yield return new WaitUntil(() => Input.GetButtonDown("Jump"));
+            isSkippingLine = true;
+        }
+
+        
     }
 
     private void OnTriggerEnter(Collider other)

@@ -202,11 +202,13 @@ MonoBehaviour:
   _player1RB: {fileID: 0}
   _player1TF: {fileID: 0}
   _player1Follower: {fileID: 0}
+  _player1Agent: {fileID: 0}
   _holdTF: {fileID: 1595847994194341002}
   _player2Movement: {fileID: 5612398307442045113}
   _holdSpeed: 4
   _holdResetTime: 2
   _angleCam: {fileID: 0}
+  Holding: 0
 --- !u!114 &4474551465636121560
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -291,6 +293,7 @@ MonoBehaviour:
   StopDistance: 0.1
   groundThreshold: 1.1
   RaycastGrounded: 0
+  Navigate: 1
 --- !u!114 &660850328642692151
 MonoBehaviour:
   m_ObjectHideFlags: 0

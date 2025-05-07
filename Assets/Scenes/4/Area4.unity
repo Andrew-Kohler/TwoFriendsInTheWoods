@@ -5677,6 +5677,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -5.04
       objectReference: {fileID: 0}
+    - target: {fileID: 8559648212068237012, guid: fa3068275471b86418aafcba9e41c094, type: 3}
+      propertyPath: _signNum
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 9104043139123045260, guid: fa3068275471b86418aafcba9e41c094, type: 3}
       propertyPath: m_LocalPosition.z
       value: -5.040001
@@ -7680,6 +7684,7 @@ GameObject:
   - component: {fileID: 252833430}
   - component: {fileID: 252833429}
   - component: {fileID: 252833428}
+  - component: {fileID: 252833431}
   m_Layer: 0
   m_Name: Left LVL Bound
   m_TagString: Untagged
@@ -7696,8 +7701,8 @@ Transform:
   m_GameObject: {fileID: 252833426}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -8.1, y: 0, z: -0.7}
-  m_LocalScale: {x: 116.88796, y: 43.890045, z: 0.7310636}
+  m_LocalPosition: {x: -22.8749, y: 0, z: -0.7}
+  m_LocalScale: {x: 116.88796, y: 43.890045, z: 30.060547}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1190741620}
@@ -7773,6 +7778,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 252833426}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!208 &252833431
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 252833426}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1001 &253839820
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9290,6 +9311,7 @@ GameObject:
   - component: {fileID: 327948452}
   - component: {fileID: 327948451}
   - component: {fileID: 327948450}
+  - component: {fileID: 327948454}
   m_Layer: 0
   m_Name: Back LVL Bound
   m_TagString: Untagged
@@ -9377,12 +9399,28 @@ Transform:
   m_GameObject: {fileID: 327948449}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 53.5, y: 0, z: 2.9}
-  m_LocalScale: {x: 116.88796, y: 43.890045, z: 0.7310636}
+  m_LocalPosition: {x: 53.5, y: 0, z: 14.7504}
+  m_LocalScale: {x: 116.88796, y: 43.890045, z: 25.885784}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1190741620}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!208 &327948454
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 327948449}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1001 &329892034
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -47426,6 +47464,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Functional Log (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6937136733954669347, guid: 6659b140e9cd3fe4eb3fe29b1b53133a, type: 3}
+      propertyPath: m_Width
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -52711,6 +52753,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 1.41
       objectReference: {fileID: 0}
+    - target: {fileID: 5847228850817578573, guid: 41374e09e89a19d4592fc0b1655690ac, type: 3}
+      propertyPath: m_AutoTraverseOffMeshLink
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -52864,6 +52910,14 @@ PrefabInstance:
     - target: {fileID: 1964490042544131277, guid: 6659b140e9cd3fe4eb3fe29b1b53133a, type: 3}
       propertyPath: m_Name
       value: Functional Log
+      objectReference: {fileID: 0}
+    - target: {fileID: 6937136733954669347, guid: 6659b140e9cd3fe4eb3fe29b1b53133a, type: 3}
+      propertyPath: m_Area
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6937136733954669347, guid: 6659b140e9cd3fe4eb3fe29b1b53133a, type: 3}
+      propertyPath: m_Width
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -53387,6 +53441,10 @@ PrefabInstance:
     - target: {fileID: 2871745221578258695, guid: 060dedc05a48c4546886f710106456e3, type: 3}
       propertyPath: m_Name
       value: Game Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 2871745221578258695, guid: 060dedc05a48c4546886f710106456e3, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4251890026499543903, guid: 060dedc05a48c4546886f710106456e3, type: 3}
       propertyPath: m_IsActive

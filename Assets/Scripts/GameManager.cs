@@ -16,12 +16,16 @@ public class GameManager : MonoBehaviour
     public GameState _currentGameState;
 
     public static bool P1Leading;
-    public static bool CanLoadAgent; // Whether the characters are together and we can move along
+    public static bool CanLoadAgent;    // Whether the characters are together and we can move along
+    public static bool IsGamerControls; // What control scheme is read onto the trail signs
+    public static bool IsTapThru;
 
     private static void DefaultData()
     {
         P1Leading = true;
         CanLoadAgent = true;
+        IsGamerControls = true;
+        IsTapThru = false;
     }
 
     #region SETTINGS VALUES

@@ -8,7 +8,10 @@ public class Dialogue : View
     [SerializeField] private TextMeshProUGUI speechBubble;
     [SerializeField] private GameObject _leftBubbleConnector;
     [SerializeField] private GameObject _rightBubbleConnector;
+    [Header("Dialogue Move Forward Indicator")]
     [SerializeField] private GameObject _spaceBar;
+    [SerializeField] private GameObject _gamerControls;
+    [SerializeField] private GameObject _casualControls;
 
     private float _yLevel = 260.4f;
     public override void Initialize()
@@ -19,7 +22,16 @@ public class Dialogue : View
     // Update is called once per frame
     void Update()
     {
-        
+        if (GameManager.IsGamerControls)
+        {
+            _gamerControls.SetActive(true);
+            _casualControls.SetActive(false);
+        }
+        else
+        {
+            _gamerControls.SetActive(false);
+            _casualControls.SetActive(true);
+        }
     }
 
     public void setText(string text)
