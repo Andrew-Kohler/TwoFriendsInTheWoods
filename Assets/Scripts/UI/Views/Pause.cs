@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Pause : View
 {
@@ -11,6 +12,8 @@ public class Pause : View
     [SerializeField] private Toggle _casualToggle;
     [SerializeField] private Toggle _gamerToggle;
     [SerializeField] private Toggle _tapThruToggle;
+    [SerializeField] private Slider _volSlider;
+    [SerializeField] private TextMeshProUGUI _volReadout;
 
     public override void Initialize()
     {
@@ -34,6 +37,8 @@ public class Pause : View
             _tapThruToggle.isOn = true;
         else
             _tapThruToggle.isOn = false;
+
+        _volSlider.value = GameManager.GameVol * 10;
     }
 
     // Update is called once per frame
@@ -71,6 +76,12 @@ public class Pause : View
     public void ToggleTapThru()
     {
         GameManager.IsTapThru = _tapThruToggle.isOn;
+    }
+
+    public void VolumeSlider()
+    {
+        GameManager.GameVol = _volSlider.value / 10;
+        _volReadout.text = _volSlider.value * 10f + "%";
     }
 
     public void OptionsBack()

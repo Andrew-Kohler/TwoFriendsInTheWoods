@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 public class SoundBox : MonoBehaviour
 {
     private AudioSource _audioSource;
-    private bool silent;
     private bool activeCoroutine = false;
 
     [SerializeField] private AudioClip _forest;
@@ -38,7 +37,10 @@ public class SoundBox : MonoBehaviour
 
     private void Update()
     {
-        
+        if (!activeCoroutine && GameManager.Instance._currentGameState != GameManager.GameState.Load)
+        {
+            _audioSource.volume = _maxVol * GameManager.GameVol;
+        }
 
     }
 
@@ -68,7 +70,6 @@ public class SoundBox : MonoBehaviour
             _audioSource.clip = _falls;
         }
 
-        silent = false;
         if (!_audioSource.isPlaying)
             _audioSource.Play();
         StartCoroutine(DoFadeIn());
@@ -76,7 +77,6 @@ public class SoundBox : MonoBehaviour
 
         if (val == 3)
         {
-            silent = true;
             StopAllCoroutines();
             activeCoroutine = false;
             _audioSource.volume = 0f;
@@ -100,11 +100,6 @@ public class SoundBox : MonoBehaviour
     {
         StopAllCoroutines();
         StartCoroutine(DoFadeOut());
-    }
-
-    public void HardStop()
-    {
-        silent = true;
     }
 
     private int sceneCheck()
@@ -131,13 +126,13 @@ public class SoundBox : MonoBehaviour
     private IEnumerator DoFadeIn()
     {
         activeCoroutine = true;
-        while (_audioSource.volume < _maxVol)
+        while (_audioSource.volume < _maxVol * GameManager.GameVol)
         {
-            _audioSource.volume += Time.deltaTime * _maxVol;
+            _audioSource.volume += Time.deltaTime * _maxVol * GameManager.GameVol;
             yield return null;
         }
         //_audioSource.time = songTime;
-        _audioSource.volume = _maxVol;
+        _audioSource.volume = _maxVol * GameManager.GameVol;
         activeCoroutine = false;
         yield return null;
     }
@@ -147,7 +142,7 @@ public class SoundBox : MonoBehaviour
         activeCoroutine = true;
         while (_audioSource.volume > 0)
         {
-            _audioSource.volume -= Time.deltaTime * _maxVol;
+            _audioSource.volume -= Time.deltaTime * _maxVol * GameManager.GameVol;
             yield return null;
         }
         //_audioSource.time = songTime;

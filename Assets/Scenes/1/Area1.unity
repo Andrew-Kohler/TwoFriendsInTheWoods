@@ -41225,6 +41225,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1906847183393061139, guid: ced1031488fad67499388a5e64a201cb, type: 3}
+      propertyPath: m_Volume
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8067779711268966679, guid: ced1031488fad67499388a5e64a201cb, type: 3}
       propertyPath: m_Name
       value: '[Sound Box]'
@@ -41604,6 +41608,10 @@ PrefabInstance:
       value: Game Canvas
       objectReference: {fileID: 0}
     - target: {fileID: 2871745221578258695, guid: 060dedc05a48c4546886f710106456e3, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3053869785735879559, guid: 060dedc05a48c4546886f710106456e3, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}

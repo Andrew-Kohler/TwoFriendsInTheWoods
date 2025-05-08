@@ -18,7 +18,8 @@ public class GameManager : MonoBehaviour
     public static bool P1Leading;
     public static bool CanLoadAgent;    // Whether the characters are together and we can move along
     public static bool IsGamerControls; // What control scheme is read onto the trail signs
-    public static bool IsTapThru;
+    public static bool IsTapThru;       // Whether the player can rapid tap through dialogue
+    public static float GameVol;
 
     private static void DefaultData()
     {
@@ -26,6 +27,7 @@ public class GameManager : MonoBehaviour
         CanLoadAgent = true;
         IsGamerControls = true;
         IsTapThru = false;
+        GameVol = 1;
     }
 
     #region SETTINGS VALUES
