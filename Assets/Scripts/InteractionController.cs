@@ -79,16 +79,20 @@ public class InteractionController : MonoBehaviour
     private IEnumerator DoInteraction()
     {
         _activeCoroutine = true;
+
         // Remove control from the player
         GameManager.Instance._currentGameState = GameManager.GameState.Interaction;
-        // Blend the camera from its current position to the virtual camera we have set up
-        _interactionCamera.gameObject.SetActive(true);
-        _mainCamera.gameObject.SetActive(false);
 
         // Turn off the particle system
         ParticleSystem.EmissionModule e = _sys.emission;
         e.rateOverTime = 0;
         GetComponent<MeshRenderer>().enabled = false;
+
+        // Blend the camera from its current position to the virtual camera we have set up
+        _interactionCamera.gameObject.SetActive(true);
+        _mainCamera.Follow = null;
+        _mainCamera.LookAt = null;
+        _mainCamera.gameObject.SetActive(false);
 
         // Move the players to certain points
         if (_p1Move.enabled)
@@ -198,6 +202,16 @@ public class InteractionController : MonoBehaviour
         else
         {
             // Blend the camera back to main camera
+            if (_wasP1Leader)
+            {
+                _mainCamera.Follow = _p1.transform;
+                _mainCamera.LookAt = _p1.transform;
+            }
+            else
+            {
+                _mainCamera.Follow = _p2.transform;
+                _mainCamera.LookAt = _p2.transform;
+            }
             _mainCamera.gameObject.SetActive(true);
 
             yield return new WaitForSeconds(2f);
