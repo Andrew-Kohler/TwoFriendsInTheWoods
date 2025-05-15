@@ -26,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
     protected bool _jumping = false;
 
     protected bool _isInteractionMoving;
-    private Vector3 _toMoveTowards;
+    private Vector3 _jumpDir = new Vector3(0, 1, 0);
 
     // Animation variables
     public enum Direction { Forwards, ForwardsLeft, ForwardsRight, Left, Right, Backwards, BackwardsLeft, BackwardsRight, Null };
@@ -81,30 +81,31 @@ public class PlayerMovement : MonoBehaviour
         if (GameManager.Instance._currentGameState == GameManager.GameState.Gameplay)
         {
             _rb.velocity = _velocity;
+
+            Vector3 jump = _jumpDir;
+            //Debug.Log("Initial jump: " + jump);
+            if (Physics.Raycast(_rb.position, Vector3.down, out RaycastHit hit) && hit.distance < groundThreshold)
+            {
+                //Debug.Log("Normal vector: " + hit.normal);
+                jump = Vector3.ProjectOnPlane(jump, hit.normal);
+            }
+            //Debug.Log("After normalization jump: " + jump);
+            jump *= JumpForce;
+            //Debug.Log("After mult jump: " + jump);
+            Vector3 finalJump = new Vector3(jump.x, JumpForce, jump.z);
+
             if (_jumping)
             {
-                _rb.AddForce(new Vector3(0, JumpForce, 0), ForceMode.Impulse);
+                _rb.AddForce(finalJump, ForceMode.Impulse);
                 _jumping = false;
             }
-        }
-
-        if (_isInteractionMoving)
-        {
-            if(Vector3.Distance(transform.position, _toMoveTowards) > .1f)
-                transform.position = Vector3.MoveTowards(transform.position, _toMoveTowards, MovementSpeed * Time.deltaTime);
         }
             
     }
 
-    public void MoveToPoint(bool active, Vector3 point)
-    {
-        _toMoveTowards = point;
-        _isInteractionMoving = active;
-    }
-
     public Direction GetDirection() // Returns the direction the player is facing
     {
-        float threshold = .001f;
+        float threshold = .01f;
         Vector2 dir = Vector2.zero;
         _rb = GetComponent<Rigidbody>();
         dir.x = _rb.velocity.x;

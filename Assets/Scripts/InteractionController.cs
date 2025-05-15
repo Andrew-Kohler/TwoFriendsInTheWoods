@@ -4,6 +4,7 @@ using UnityEngine;
 using Cinemachine;
 using UnityEngine.AI;
 using Unity.Mathematics;
+using UnityEngine.SceneManagement;
 
 public class InteractionController : MonoBehaviour
 {
@@ -202,16 +203,20 @@ public class InteractionController : MonoBehaviour
         else
         {
             // Blend the camera back to main camera
-            if (_wasP1Leader)
+            if(SceneManager.GetActiveScene().name != "Area8")
             {
-                _mainCamera.Follow = _p1.transform;
-                _mainCamera.LookAt = _p1.transform;
+                if (_wasP1Leader)
+                {
+                    _mainCamera.Follow = _p1.transform;
+                    _mainCamera.LookAt = _p1.transform;
+                }
+                else
+                {
+                    _mainCamera.Follow = _p2.transform;
+                    _mainCamera.LookAt = _p2.transform;
+                }
             }
-            else
-            {
-                _mainCamera.Follow = _p2.transform;
-                _mainCamera.LookAt = _p2.transform;
-            }
+            
             _mainCamera.gameObject.SetActive(true);
 
             yield return new WaitForSeconds(2f);

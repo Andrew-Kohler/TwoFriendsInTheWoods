@@ -70400,11 +70400,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4493663520632437087, guid: 58b0015adb09bc94ba32500b767219b9, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000018749036
+      value: 0.000000018749038
       objectReference: {fileID: 0}
     - target: {fileID: 4493663520632437087, guid: 58b0015adb09bc94ba32500b767219b9, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.000000004306741
+      value: -0.0000000043067407
       objectReference: {fileID: 0}
     - target: {fileID: 4493663520632437087, guid: 58b0015adb09bc94ba32500b767219b9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -70495,11 +70495,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 956365023865823451, guid: 05dbbd1eba1616041946e1096dacf3e6, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000018749036
+      value: 0.000000018749038
       objectReference: {fileID: 0}
     - target: {fileID: 956365023865823451, guid: 05dbbd1eba1616041946e1096dacf3e6, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.000000004306741
+      value: -0.0000000043067407
       objectReference: {fileID: 0}
     - target: {fileID: 956365023865823451, guid: 05dbbd1eba1616041946e1096dacf3e6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -70522,6 +70522,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05dbbd1eba1616041946e1096dacf3e6, type: 3}
+--- !u!20 &2813200782959250229 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 6339595360235486854, guid: 05dbbd1eba1616041946e1096dacf3e6, type: 3}
+  m_PrefabInstance: {fileID: 2813200782959250228}
+  m_PrefabAsset: {fileID: 0}
 --- !u!23 &3191663626192443546
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -70888,6 +70893,14 @@ PrefabInstance:
     - target: {fileID: 8506074879384383999, guid: 060dedc05a48c4546886f710106456e3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8971274123459589863, guid: 060dedc05a48c4546886f710106456e3, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 2813200782959250229}
+    - target: {fileID: 8971274123459589863, guid: 060dedc05a48c4546886f710106456e3, type: 3}
+      propertyPath: m_PlaneDistance
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

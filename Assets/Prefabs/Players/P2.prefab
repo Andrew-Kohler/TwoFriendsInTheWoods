@@ -192,7 +192,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MovementSpeed: 7
   JumpForce: 10
-  groundThreshold: 1.1
+  groundThreshold: 0.15
   HorizontalInput: 0
   VerticalInput: 0
   Grounded: 0

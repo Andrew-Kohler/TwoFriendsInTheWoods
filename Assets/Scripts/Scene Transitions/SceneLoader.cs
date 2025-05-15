@@ -31,14 +31,14 @@ public class SceneLoader : MonoBehaviour
         GameManager.Instance._currentGameState = GameManager.GameState.Load;
         ViewManager.Show<Transition>(false);
         ViewManager.GetView<Transition>().PlaySceneExit();
-        yield return new WaitForSeconds(1.33f);
+        yield return new WaitForSeconds(2f); // 1.33 - 16
         SceneManager.LoadScene(nextSceneName);
     }
 
     private IEnumerator DoSceneLoadStart() // Happens on start, allows for animation to play
     {
         ViewManager.Show<Transition>(false);
-        yield return new WaitForSeconds(1.33f);
+        yield return new WaitForSeconds(2f); // 1 - 12
         GameManager.Instance._currentGameState = GameManager.GameState.Gameplay;
         ViewManager.Show<Standard>(false);
     }

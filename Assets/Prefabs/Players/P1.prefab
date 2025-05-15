@@ -158,6 +158,7 @@ MonoBehaviour:
   StopDistance: 0.1
   groundThreshold: 0.1
   RaycastGrounded: 0
+  Navigate: 1
 --- !u!114 &1582286262587266335
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -204,7 +205,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MovementSpeed: 7
   JumpForce: 10
-  groundThreshold: 1.1
+  groundThreshold: 0.1
   HorizontalInput: 0
   VerticalInput: 0
   Grounded: 0
@@ -226,6 +227,7 @@ GameObject:
   - component: {fileID: 351171480212508683}
   - component: {fileID: 2531756737007339227}
   - component: {fileID: 6900990131295235789}
+  - component: {fileID: 1584519285286492686}
   m_Layer: 7
   m_Name: Collider
   m_TagString: Player
@@ -315,10 +317,33 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 2, y: 1.9999996, z: 2.4901536}
   m_Center: {x: 0, y: -0.0000001168622, z: -0.2450778}
+--- !u!136 &1584519285286492686
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2151389633556781643}
+  m_Material: {fileID: 13400000, guid: 8aceb9ed3bfdbc94eb069f5f292e8ba0, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5962467
+  m_Height: 2.601465
+  m_Direction: 2
+  m_Center: {x: -0.06368446, y: -0.00000009278049, z: -0.19457483}
 --- !u!1 &2962240980884800796
 GameObject:
   m_ObjectHideFlags: 0

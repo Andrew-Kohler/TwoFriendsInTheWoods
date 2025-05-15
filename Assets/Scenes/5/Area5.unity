@@ -9676,6 +9676,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6858364699682716629, guid: 4852007d1ed0faa49bf7e2f91add1706, type: 3}
   m_PrefabInstance: {fileID: 2057610055}
   m_PrefabAsset: {fileID: 0}
+--- !u!20 &2062087236 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 6339595360235486854, guid: 05dbbd1eba1616041946e1096dacf3e6, type: 3}
+  m_PrefabInstance: {fileID: 2813200782959250228}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2107878432
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10404,9 +10409,10 @@ GameObject:
   - component: {fileID: 1833115495388530957}
   - component: {fileID: 7815580710415734226}
   - component: {fileID: 7815580710415734227}
-  m_Layer: 6
+  - component: {fileID: 7815580710415734228}
+  m_Layer: 0
   m_Name: Cube
-  m_TagString: Terrain
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10521,6 +10527,29 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.001, y: -0.012, z: 0.002}
   m_TimeToStationary: 0.5
+--- !u!136 &7815580710415734228
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6411618608307958137}
+  m_Material: {fileID: 13400000, guid: 8aceb9ed3bfdbc94eb069f5f292e8ba0, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.032503493
+  m_Height: 0.31
+  m_Direction: 2
+  m_Center: {x: -0.00056543306, y: -0.012202577, z: 0.0016499598}
 --- !u!1 &7909610686469421977
 GameObject:
   m_ObjectHideFlags: 0
@@ -10760,6 +10789,14 @@ PrefabInstance:
     - target: {fileID: 8506074879384383999, guid: 060dedc05a48c4546886f710106456e3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8971274123459589863, guid: 060dedc05a48c4546886f710106456e3, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 2062087236}
+    - target: {fileID: 8971274123459589863, guid: 060dedc05a48c4546886f710106456e3, type: 3}
+      propertyPath: m_PlaneDistance
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

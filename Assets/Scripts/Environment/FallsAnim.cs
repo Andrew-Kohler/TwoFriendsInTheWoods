@@ -20,8 +20,6 @@ public class FallsAnim : MonoBehaviour
     private bool faceDirBool;
 
     public int walkType = 0;    // 0 = stone, 1 = earth, 2 = wood, 3 = water
-    private bool footBool1 = false;
-    private bool footBool2 = false;
 
     private float deltaT;
     private float _horizontalInput;
@@ -71,10 +69,6 @@ public class FallsAnim : MonoBehaviour
             {
                 _frame = _frameReset;
                 deltaT = _frame / animationSpeed; // 0
-
-
-                footBool1 = false;
-                footBool2 = false;
             }
             /*Debug.Log("Frame = " + _frame + " Frame Reset = " + _frameReset + " Frame Loop = " 
                 + _frameLoop + " Action = " + _pAction + " Direction = " + _animDir);*/

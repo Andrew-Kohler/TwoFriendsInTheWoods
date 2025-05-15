@@ -106,27 +106,31 @@ public class PlayerAnimatior : MonoBehaviour
         }
 
         // Get our animation data from the correct source
-        if (_pMovement.enabled)
+        if(!IsLoad() || _animDir == PlayerMovement.Direction.Null)
         {
-            _animDir = _pMovement.GetDirection();
-            _pAction = _pMovement.GetAction();
-        }
-        else
-        {
-            _pAction = _pFollower.GetAction();
-            if (GameManager.Instance._currentGameState == GameManager.GameState.Interaction)
+            if (_pMovement.enabled)
             {
-                if(_interactionDir != PlayerMovement.Direction.Null && _pAction != PlayerMovement.Action.Walk)
-                {
-                    _animDir = _interactionDir;
-                }
+                _animDir = _pMovement.GetDirection();
+                _pAction = _pMovement.GetAction();
             }
             else
             {
-                _animDir = _pFollower.GetDirection();
+                _pAction = _pFollower.GetAction();
+                if (GameManager.Instance._currentGameState == GameManager.GameState.Interaction)
+                {
+                    if (_interactionDir != PlayerMovement.Direction.Null && _pAction != PlayerMovement.Action.Walk)
+                    {
+                        _animDir = _interactionDir;
+                    }
+                }
+                else
+                {
+                    _animDir = _pFollower.GetDirection();
+                }
+
             }
-            
         }
+        
 
 
         // The logic that determines what animation should be played 
@@ -296,7 +300,7 @@ public class PlayerAnimatior : MonoBehaviour
 
             else if (IsLoad())
             {
-                animationSpeed = 0.01f;
+                animationSpeed = 1f;
                 _aIndex = _IdleIndex;
 
                 switch (_animDir)
