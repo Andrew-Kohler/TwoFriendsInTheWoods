@@ -62,6 +62,7 @@ public class SoundBox : MonoBehaviour
         }
         else if(val == 2)
         {
+            _maxVol = .5f;
             _audioSource.clip = _valley;
         }
         else if (val == 4)
@@ -108,11 +109,11 @@ public class SoundBox : MonoBehaviour
         {
             return 1; // Ridge
         }
-        else if (SceneManager.GetActiveScene().name == "Area8")
+        else if (SceneManager.GetActiveScene().name == "Area8" || SceneManager.GetActiveScene().name == "MainMenu")
         {
             return 2; // Valley
         }
-        else if (SceneManager.GetActiveScene().name == "MainMenu")
+        else if (SceneManager.GetActiveScene().name == "13 - Credits")
         {
             return 3;
         }
@@ -126,6 +127,7 @@ public class SoundBox : MonoBehaviour
     private IEnumerator DoFadeIn()
     {
         activeCoroutine = true;
+        
         while (_audioSource.volume < _maxVol * GameManager.GameVol)
         {
             _audioSource.volume += Time.deltaTime * _maxVol * GameManager.GameVol;

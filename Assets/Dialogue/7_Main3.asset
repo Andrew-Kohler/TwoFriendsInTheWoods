@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: 7_Main3
   m_EditorClassIdentifier: 
   lines:
+  - ...
   - How's your family doing?
   - Not great. I think all any of them can think about is how much longer they've
     got me.
@@ -40,9 +41,9 @@ MonoBehaviour:
   - Why didn't you send me anything? A card, a text? I would have sent a gift.
   - I thought about it, but...
   - ...
-  - I dunno. You were so far away.
+  - I don't know. You were so far away.
   - ...
   - I guess I was.
   - Sorry for not calling more. I... I wish I had.
   - Me too.
-  bubbleChara1: 01000100010001000001000100010001010101000100000001010100000001
+  bubbleChara1: 0101000100010001000001000100010001010101000100000001010100000001

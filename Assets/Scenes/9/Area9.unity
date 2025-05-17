@@ -231,6 +231,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &4358940
 Animator:
   serializedVersion: 5
@@ -350,6 +355,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &4705483
 Animator:
   serializedVersion: 5
@@ -531,6 +541,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &11307767
 Animator:
   serializedVersion: 5
@@ -898,6 +913,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &24759541
 Animator:
   serializedVersion: 5
@@ -1709,6 +1729,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &57970291
 Animator:
   serializedVersion: 5
@@ -2570,6 +2595,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &77950991
 Animator:
   serializedVersion: 5
@@ -2751,6 +2781,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &83324343
 Animator:
   serializedVersion: 5
@@ -3002,6 +3037,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &90491852
 Animator:
   serializedVersion: 5
@@ -3560,6 +3600,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &116371389
 Animator:
   serializedVersion: 5
@@ -3803,6 +3848,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &120360531
 Animator:
   serializedVersion: 5
@@ -4232,6 +4282,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &138806951
 Animator:
   serializedVersion: 5
@@ -4413,6 +4468,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &145051774
 Animator:
   serializedVersion: 5
@@ -4656,6 +4716,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &155677867
 Animator:
   serializedVersion: 5
@@ -5835,6 +5900,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &196307670
 Animator:
   serializedVersion: 5
@@ -11165,6 +11235,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &215661235
 Animator:
   serializedVersion: 5
@@ -11284,6 +11359,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &227165755
 Animator:
   serializedVersion: 5
@@ -11465,6 +11545,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &228275752
 Animator:
   serializedVersion: 5
@@ -11646,6 +11731,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &232781809
 Animator:
   serializedVersion: 5
@@ -12075,6 +12165,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &247487167
 Animator:
   serializedVersion: 5
@@ -12566,6 +12661,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &270692949
 Animator:
   serializedVersion: 5
@@ -12685,6 +12785,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &272405968
 Animator:
   serializedVersion: 5
@@ -12804,6 +12909,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &275922110
 Animator:
   serializedVersion: 5
@@ -13327,6 +13437,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &294740552
 Animator:
   serializedVersion: 5
@@ -13756,6 +13871,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &305895564
 Animator:
   serializedVersion: 5
@@ -13875,6 +13995,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &307649513
 Animator:
   serializedVersion: 5
@@ -14242,6 +14367,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &312734899
 Animator:
   serializedVersion: 5
@@ -15351,6 +15481,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &359092824
 Animator:
   serializedVersion: 5
@@ -15470,6 +15605,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &359414103
 Animator:
   serializedVersion: 5
@@ -15651,6 +15791,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &368506885
 Animator:
   serializedVersion: 5
@@ -16208,6 +16353,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &394256668
 Animator:
   serializedVersion: 5
@@ -16389,6 +16539,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &402681989
 Animator:
   serializedVersion: 5
@@ -16570,6 +16725,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &409426079
 Animator:
   serializedVersion: 5
@@ -16813,6 +16973,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &426769916
 Animator:
   serializedVersion: 5
@@ -17118,6 +17283,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &433657229
 Animator:
   serializedVersion: 5
@@ -18351,6 +18521,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &459596858
 Animator:
   serializedVersion: 5
@@ -18470,6 +18645,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &460147376
 Animator:
   serializedVersion: 5
@@ -20335,6 +20515,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &527651417
 Animator:
   serializedVersion: 5
@@ -21495,6 +21680,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &578809159
 Animator:
   serializedVersion: 5
@@ -21614,6 +21804,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &579337446
 Animator:
   serializedVersion: 5
@@ -21795,6 +21990,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &582582791
 Animator:
   serializedVersion: 5
@@ -22348,6 +22548,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &600035071
 Animator:
   serializedVersion: 5
@@ -22956,6 +23161,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &630919511
 Animator:
   serializedVersion: 5
@@ -23385,6 +23595,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &648141358
 Animator:
   serializedVersion: 5
@@ -23690,6 +23905,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &655135650
 Animator:
   serializedVersion: 5
@@ -23809,6 +24029,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &656152582
 Animator:
   serializedVersion: 5
@@ -23928,6 +24153,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &657431183
 Animator:
   serializedVersion: 5
@@ -24171,6 +24401,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &662168590
 Animator:
   serializedVersion: 5
@@ -24352,6 +24587,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &664638955
 Animator:
   serializedVersion: 5
@@ -24533,6 +24773,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &669959267
 Animator:
   serializedVersion: 5
@@ -24776,6 +25021,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &673887988
 Animator:
   serializedVersion: 5
@@ -26155,6 +26405,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &726907757
 Animator:
   serializedVersion: 5
@@ -26801,6 +27056,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &758198394
 Animator:
   serializedVersion: 5
@@ -28130,6 +28390,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &811747080
 Animator:
   serializedVersion: 5
@@ -28311,6 +28576,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &813829443
 Animator:
   serializedVersion: 5
@@ -29422,6 +29692,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &843563995
 Animator:
   serializedVersion: 5
@@ -29577,6 +29852,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &848744786
 Animator:
   serializedVersion: 5
@@ -29696,6 +29976,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &849259748
 Animator:
   serializedVersion: 5
@@ -29877,6 +30162,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &854410303
 Animator:
   serializedVersion: 5
@@ -30277,6 +30567,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &868579194
 Animator:
   serializedVersion: 5
@@ -31500,6 +31795,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &932043737
 Animator:
   serializedVersion: 5
@@ -31619,6 +31919,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &936776062
 Animator:
   serializedVersion: 5
@@ -31738,6 +32043,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &939027448
 Animator:
   serializedVersion: 5
@@ -31857,6 +32167,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &941630561
 Animator:
   serializedVersion: 5
@@ -32162,6 +32477,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &952667954
 Animator:
   serializedVersion: 5
@@ -32467,6 +32787,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &962596493
 Animator:
   serializedVersion: 5
@@ -32834,6 +33159,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &970628122
 Animator:
   serializedVersion: 5
@@ -33015,6 +33345,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &970945182
 Animator:
   serializedVersion: 5
@@ -33568,6 +33903,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &992744542
 Animator:
   serializedVersion: 5
@@ -34245,6 +34585,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &1010240091
 Animator:
   serializedVersion: 5
@@ -34741,6 +35086,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &1019186230
 Animator:
   serializedVersion: 5
@@ -34984,6 +35334,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &1028717837
 Animator:
   serializedVersion: 5
@@ -35103,6 +35458,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &1031848492
 Animator:
   serializedVersion: 5
@@ -35284,6 +35644,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &1036267761
 Animator:
   serializedVersion: 5
@@ -36798,6 +37163,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &1072157599
 Animator:
   serializedVersion: 5
@@ -37124,6 +37494,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &1075055389
 Animator:
   serializedVersion: 5
@@ -37429,6 +37804,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &1088325714
 Animator:
   serializedVersion: 5
@@ -37548,6 +37928,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &1093430317
 Animator:
   serializedVersion: 5
@@ -37791,6 +38176,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &1097693199
 Animator:
   serializedVersion: 5
@@ -38034,6 +38424,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &1107012554
 Animator:
   serializedVersion: 5
@@ -43116,6 +43511,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &1121152717
 Animator:
   serializedVersion: 5
@@ -43235,6 +43635,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &1123106726
 Animator:
   serializedVersion: 5
@@ -43452,6 +43857,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &1129816128
 Animator:
   serializedVersion: 5
@@ -43995,6 +44405,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &1150072577
 Animator:
   serializedVersion: 5
@@ -44176,6 +44591,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &1153488627
 Animator:
   serializedVersion: 5
@@ -44874,6 +45294,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &1186951977
 Animator:
   serializedVersion: 5
@@ -45275,6 +45700,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &1205796713
 Animator:
   serializedVersion: 5
@@ -45394,6 +45824,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &1228315423
 Animator:
   serializedVersion: 5
@@ -45947,6 +46382,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &1249326793
 Animator:
   serializedVersion: 5
@@ -46314,6 +46754,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &1254368912
 Animator:
   serializedVersion: 5
@@ -46433,6 +46878,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &1254372024
 Animator:
   serializedVersion: 5
@@ -47092,6 +47542,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &1278460234
 Animator:
   serializedVersion: 5
@@ -47273,6 +47728,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &1283715016
 Animator:
   serializedVersion: 5
@@ -47812,6 +48272,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &1302927104
 Animator:
   serializedVersion: 5
@@ -48055,6 +48520,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &1311409629
 Animator:
   serializedVersion: 5
@@ -48546,6 +49016,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &1320798297
 Animator:
   serializedVersion: 5
@@ -48727,6 +49202,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &1322707917
 Animator:
   serializedVersion: 5
@@ -49032,6 +49512,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &1334699192
 Animator:
   serializedVersion: 5
@@ -49151,6 +49636,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &1335062014
 Animator:
   serializedVersion: 5
@@ -49642,6 +50132,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &1344082025
 Animator:
   serializedVersion: 5
@@ -49761,6 +50256,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &1349317781
 Animator:
   serializedVersion: 5
@@ -50128,6 +50628,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &1365150392
 Animator:
   serializedVersion: 5
@@ -50373,6 +50878,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &1368406303
 Animator:
   serializedVersion: 5
@@ -50492,6 +51002,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &1378000244
 Animator:
   serializedVersion: 5
@@ -51045,6 +51560,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &1401509302
 Animator:
   serializedVersion: 5
@@ -51164,6 +51684,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &1403645191
 Animator:
   serializedVersion: 5
@@ -51283,6 +51808,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &1404366858
 Animator:
   serializedVersion: 5
@@ -51464,6 +51994,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &1408199745
 Animator:
   serializedVersion: 5
@@ -51707,6 +52242,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &1413544877
 Animator:
   serializedVersion: 5
@@ -52260,6 +52800,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &1433870534
 Animator:
   serializedVersion: 5
@@ -52379,6 +52924,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &1445486487
 Animator:
   serializedVersion: 5
@@ -52684,6 +53234,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &1463694895
 Animator:
   serializedVersion: 5
@@ -52927,6 +53482,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &1472747634
 Animator:
   serializedVersion: 5
@@ -53046,6 +53606,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &1474832875
 Animator:
   serializedVersion: 5
@@ -53785,6 +54350,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &1506922158
 Animator:
   serializedVersion: 5
@@ -54001,6 +54571,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &1516522904
 Animator:
   serializedVersion: 5
@@ -56272,6 +56847,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &1582302532
 Animator:
   serializedVersion: 5
@@ -56734,6 +57314,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &1603330247
 Animator:
   serializedVersion: 5
@@ -56853,6 +57438,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &1603342118
 Animator:
   serializedVersion: 5
@@ -57344,6 +57934,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &1633155498
 Animator:
   serializedVersion: 5
@@ -57463,6 +58058,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &1636146496
 Animator:
   serializedVersion: 5
@@ -57962,6 +58562,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &1647436101
 Animator:
   serializedVersion: 5
@@ -58497,6 +59102,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &1665735467
 Animator:
   serializedVersion: 5
@@ -58740,6 +59350,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &1673457583
 Animator:
   serializedVersion: 5
@@ -59061,6 +59676,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &1682452099
 Animator:
   serializedVersion: 5
@@ -59180,6 +59800,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &1682484796
 Animator:
   serializedVersion: 5
@@ -59423,6 +60048,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &1690203288
 Animator:
   serializedVersion: 5
@@ -59666,6 +60296,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &1695693781
 Animator:
   serializedVersion: 5
@@ -60201,6 +60836,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &1725891927
 Animator:
   serializedVersion: 5
@@ -60320,6 +60960,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &1726545659
 Animator:
   serializedVersion: 5
@@ -60811,6 +61456,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &1742581312
 Animator:
   serializedVersion: 5
@@ -61674,6 +62324,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &1766936040
 Animator:
   serializedVersion: 5
@@ -62041,6 +62696,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &1794374989
 Animator:
   serializedVersion: 5
@@ -62973,6 +63633,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &1843148466
 Animator:
   serializedVersion: 5
@@ -63092,6 +63757,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &1848010699
 Animator:
   serializedVersion: 5
@@ -63211,6 +63881,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &1852375678
 Animator:
   serializedVersion: 5
@@ -63888,6 +64563,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &1885887175
 Animator:
   serializedVersion: 5
@@ -64263,6 +64943,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &1901183518
 Animator:
   serializedVersion: 5
@@ -64434,6 +65119,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &1913612665
 Animator:
   serializedVersion: 5
@@ -64553,6 +65243,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &1916015490
 Animator:
   serializedVersion: 5
@@ -65044,6 +65739,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &1926571518
 Animator:
   serializedVersion: 5
@@ -65680,6 +66380,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &1948313247
 Animator:
   serializedVersion: 5
@@ -65799,6 +66504,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &1948474010
 Animator:
   serializedVersion: 5
@@ -66042,6 +66752,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &1969997307
 Animator:
   serializedVersion: 5
@@ -66347,6 +67062,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &1988843287
 Animator:
   serializedVersion: 5
@@ -66528,6 +67248,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &1993736918
 Animator:
   serializedVersion: 5
@@ -66771,6 +67496,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &1998177125
 Animator:
   serializedVersion: 5
@@ -67572,6 +68302,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &2016681017
 Animator:
   serializedVersion: 5
@@ -67921,6 +68656,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &2023024972
 Animator:
   serializedVersion: 5
@@ -68040,6 +68780,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &2023203464
 Animator:
   serializedVersion: 5
@@ -68283,6 +69028,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &2051111178
 Animator:
   serializedVersion: 5
@@ -68650,6 +69400,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &2066004039
 Animator:
   serializedVersion: 5
@@ -69017,6 +69772,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &2079794765
 Animator:
   serializedVersion: 5
@@ -69136,6 +69896,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &2085143439
 Animator:
   serializedVersion: 5
@@ -69379,6 +70144,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcdfadedea6044bb31410826b1cf68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _g1arm: {fileID: 0}
+  _g1model: {fileID: 0}
+  _anim1: {fileID: 0}
+  _g2: {fileID: 0}
+  _anim2: {fileID: 0}
 --- !u!95 &2095381829
 Animator:
   serializedVersion: 5
@@ -70400,11 +71170,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4493663520632437087, guid: 58b0015adb09bc94ba32500b767219b9, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000018749038
+      value: -0.000000018749036
       objectReference: {fileID: 0}
     - target: {fileID: 4493663520632437087, guid: 58b0015adb09bc94ba32500b767219b9, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000000043067407
+      value: 0.000000004306741
       objectReference: {fileID: 0}
     - target: {fileID: 4493663520632437087, guid: 58b0015adb09bc94ba32500b767219b9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -70495,11 +71265,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 956365023865823451, guid: 05dbbd1eba1616041946e1096dacf3e6, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000018749038
+      value: -0.000000018749036
       objectReference: {fileID: 0}
     - target: {fileID: 956365023865823451, guid: 05dbbd1eba1616041946e1096dacf3e6, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000000043067407
+      value: 0.000000004306741
       objectReference: {fileID: 0}
     - target: {fileID: 956365023865823451, guid: 05dbbd1eba1616041946e1096dacf3e6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -70728,7 +71498,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7655633259316223159}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 8aceb9ed3bfdbc94eb069f5f292e8ba0, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0

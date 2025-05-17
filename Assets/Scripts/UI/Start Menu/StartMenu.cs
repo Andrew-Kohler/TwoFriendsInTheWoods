@@ -8,6 +8,7 @@ using TMPro;
 public class StartMenu : MonoBehaviour
 {
     [SerializeField] private Animator _anim; // Animator for the start sequence
+    [SerializeField] private GameObject _logo;
     [SerializeField] private GameObject _title;
     [SerializeField] private GameObject _options;
     [Header("Options Values")]
@@ -16,6 +17,12 @@ public class StartMenu : MonoBehaviour
     [SerializeField] private Toggle _tapThruToggle;
     [SerializeField] private Slider _volSlider;
     [SerializeField] private TextMeshProUGUI _volReadout;
+    [Header("Sounds")]
+    [SerializeField] private AudioClip _splash1;
+    [SerializeField] private AudioClip _splash2;
+    private AudioSource _source;
+    [SerializeField] private GameObject _soundBoxGO;
+    [SerializeField] private SoundBox _soundBox;
 
     private bool _activeCoroutine;
     private bool _introDone;
@@ -127,7 +134,18 @@ public class StartMenu : MonoBehaviour
 
     private IEnumerator DoOpenAnim()
     {
+        _source = GetComponent<AudioSource>();
         _activeCoroutine = true;
+        yield return new WaitForSeconds(.3f);
+        _source.PlayOneShot(_splash1);
+        yield return new WaitForSeconds(2f);
+        _source.PlayOneShot(_splash2);
+        yield return new WaitForSeconds(3.7f);
+        _logo.SetActive(false);
+        yield return new WaitForSeconds(1f);
+        _title.SetActive(true);
+        _soundBoxGO.SetActive(true);
+        _soundBox.newSceneCheck();
         _anim.Play("Open", 0, 0);
         yield return new WaitForSeconds(11f);
         _activeCoroutine = false;
@@ -138,8 +156,12 @@ public class StartMenu : MonoBehaviour
     {
         _activeCoroutine = true;
         _anim.Play("Start", 0, 0);
-        yield return new WaitForSeconds(5f);
         GameManager.Instance._currentGameState = GameManager.GameState.Load;
+        yield return new WaitForSeconds(2f);
+
+        _soundBox.FadeOut();
+        yield return new WaitForSeconds(3f);
+        
         SceneManager.LoadScene("Area1");
 
     }
