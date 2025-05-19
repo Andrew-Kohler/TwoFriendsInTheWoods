@@ -63,6 +63,7 @@ public class AgentLinkMover : MonoBehaviour
             normalizedTime += Time.deltaTime / duration;
             yield return null;
         }
+        agent.transform.position = endPos;
         //yield return new WaitForSeconds(.1f);
         //_canGo = true;
     }

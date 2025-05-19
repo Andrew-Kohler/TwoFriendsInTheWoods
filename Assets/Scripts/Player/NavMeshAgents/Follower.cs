@@ -179,7 +179,7 @@ public class Follower : MonoBehaviour
         Vector3 planarPos = new Vector3(this.transform.position.x, 0, this.transform.position.z);
         Vector3 planarGoal = new Vector3(goal.position.x, 0, goal.position.z);
 
-        if (Mathf.Abs(Vector3.Distance(planarGoal, planarPos)) > StopDistance && Navigate) // Determining whether we are walking or idling
+        if (Mathf.Abs(Vector3.Distance(planarGoal, planarPos)) > StopDistance && Navigate && agent.pathStatus != NavMeshPathStatus.PathPartial) // Determining whether we are walking or idling
         {
             _currentAction = PlayerMovement.Action.Walk;
         }
