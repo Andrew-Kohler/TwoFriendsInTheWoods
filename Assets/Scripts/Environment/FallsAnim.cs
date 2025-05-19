@@ -30,7 +30,7 @@ public class FallsAnim : MonoBehaviour
     private int _frameReset = 0; // A value to hold the number of the frame that the current animation loops back to (e.g. the loop starts on frame 0)
     public bool activeCoroutine = false;    // The classic boolean to use when Update() needs to be quiet during a coroutine
 
-    private int _FallsIndex = 1;
+    //private int _FallsIndex = 1;
 
     private void Start()
     {

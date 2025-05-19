@@ -26,6 +26,7 @@ public class StartMenu : MonoBehaviour
 
     private bool _activeCoroutine;
     private bool _introDone;
+    private bool _loadToCredits;
     void Start()
     {
         
@@ -40,7 +41,10 @@ public class StartMenu : MonoBehaviour
         }
         else
         {
-            _anim.Play("Static");
+            if (GameManager.GameComplete)
+                _anim.Play("Static2");
+            else
+                _anim.Play("Static");
         }
 
         GameManager.Instance._currentGameState = GameManager.GameState.Gameplay;
@@ -79,8 +83,6 @@ public class StartMenu : MonoBehaviour
 
     public void Options()
     {
-        
-
         if (!_activeCoroutine)
         {
             _options.SetActive(true);
@@ -89,12 +91,24 @@ public class StartMenu : MonoBehaviour
             
     }
 
+    public void Credits()
+    {
+        _loadToCredits = true;
+        if (!_activeCoroutine)
+            StartCoroutine(DoStartAnim());
+    }
+
     public void Back()
     {
         if (!_activeCoroutine)
         {
             _options.SetActive(false);
             _title.SetActive(true);
+
+            if (GameManager.GameComplete)
+                _anim.Play("Static2");
+            else
+                _anim.Play("Static");
         }
         
     }
@@ -136,17 +150,25 @@ public class StartMenu : MonoBehaviour
     {
         _source = GetComponent<AudioSource>();
         _activeCoroutine = true;
-        yield return new WaitForSeconds(.3f);
-        _source.PlayOneShot(_splash1);
-        yield return new WaitForSeconds(2f);
-        _source.PlayOneShot(_splash2);
-        yield return new WaitForSeconds(3.7f);
+        if (!GameManager.GameComplete) // If we've beaten the game, skip the studio logo on bootup (Farflung-core)
+        {
+            yield return new WaitForSeconds(.3f);
+            _source.PlayOneShot(_splash1);
+            yield return new WaitForSeconds(2f);
+            _source.PlayOneShot(_splash2);
+            yield return new WaitForSeconds(3.7f);
+        }
         _logo.SetActive(false);
         yield return new WaitForSeconds(1f);
         _title.SetActive(true);
         _soundBoxGO.SetActive(true);
         _soundBox.newSceneCheck();
-        _anim.Play("Open", 0, 0);
+
+        if (!GameManager.GameComplete)
+            _anim.Play("Open", 0, 0);
+        else
+            _anim.Play("Open2", 0, 0);
+
         yield return new WaitForSeconds(11f);
         _activeCoroutine = false;
         _introDone = true;
@@ -155,14 +177,27 @@ public class StartMenu : MonoBehaviour
     private IEnumerator DoStartAnim()
     {
         _activeCoroutine = true;
-        _anim.Play("Start", 0, 0);
+
+        if (!GameManager.GameComplete)
+            _anim.Play("Start", 0, 0);
+        else
+            _anim.Play("Start2", 0, 0);
+
         GameManager.Instance._currentGameState = GameManager.GameState.Load;
         yield return new WaitForSeconds(2f);
 
         _soundBox.FadeOut();
         yield return new WaitForSeconds(3f);
+
+        if (_loadToCredits)
+        {
+            SceneManager.LoadScene("13 - Credits");
+        }
+        else
+        {
+            SceneManager.LoadScene("Area1");
+        }
         
-        SceneManager.LoadScene("Area1");
 
     }
 }

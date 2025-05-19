@@ -166,16 +166,20 @@ public class Follower : MonoBehaviour
     public PlayerMovement.Action GetAction() // Returns the general action the player is undertaking
     {
         //float threshold = .001f;
-       /* Vector2 dir = Vector2.zero;
-        dir.x = _rb.velocity.x;
-        dir.y = _rb.velocity.z;
+        /* Vector2 dir = Vector2.zero;
+         dir.x = _rb.velocity.x;
+         dir.y = _rb.velocity.z;
 
-        if (Mathf.Abs(dir.x) < threshold)
-            dir.x = 0;
-        if (Mathf.Abs(dir.y) < threshold)
-            dir.y = 0;*/
+         if (Mathf.Abs(dir.x) < threshold)
+             dir.x = 0;
+         if (Mathf.Abs(dir.y) < threshold)
+             dir.y = 0;*/
 
-        if (Mathf.Abs(Vector3.Distance(goal.position, this.transform.position)) > StopDistance && Navigate) // Determining whether we are walking or idling
+        // Using positions on the same plane so that the agent doesn't try to walk just because you're jumping
+        Vector3 planarPos = new Vector3(this.transform.position.x, 0, this.transform.position.z);
+        Vector3 planarGoal = new Vector3(goal.position.x, 0, goal.position.z);
+
+        if (Mathf.Abs(Vector3.Distance(planarGoal, planarPos)) > StopDistance && Navigate) // Determining whether we are walking or idling
         {
             _currentAction = PlayerMovement.Action.Walk;
         }

@@ -100,6 +100,10 @@ public class PlayerMovement : MonoBehaviour
                 _jumping = false;
             }
         }
+        else if(GameManager.Instance._currentGameState == GameManager.GameState.Load)
+        {
+            _rb.velocity = new Vector3(0, _velocity.y, 0);
+        }
             
     }
 

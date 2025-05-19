@@ -70,20 +70,20 @@ public class SoundBox : MonoBehaviour
             _maxVol = .1f;
             _audioSource.clip = _falls;
         }
-
-        if (!_audioSource.isPlaying)
-            _audioSource.Play();
-        StartCoroutine(DoFadeIn());
-
-
-        if (val == 3)
+        else if (val == 3)
         {
             StopAllCoroutines();
             activeCoroutine = false;
             _audioSource.volume = 0f;
             if (_audioSource.isPlaying)
                 _audioSource.Stop();
+            Destroy(this.gameObject);
         }
+
+        if (!_audioSource.isPlaying && val != 3)
+            _audioSource.Play();
+        StartCoroutine(DoFadeIn());
+
     }
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode) // Not really sure about these paramenters, but they're required, so sure?
