@@ -21,12 +21,8 @@ public class PlayerAnimatior : MonoBehaviour
     [SerializeField, Tooltip("Player follower AI script")] private Follower _pFollower;
     [SerializeField] private List<AudioClip> playerSounds;
 
-    private bool faceAwayBool;
-    private bool faceDirBool;
 
     public int walkType = 0;    // 0 = stone, 1 = earth, 2 = wood, 3 = water
-    //private bool footBool1 = false;
-    //private bool footBool2 = false;
 
     private float deltaT;
     private float _horizontalInput;
@@ -40,8 +36,10 @@ public class PlayerAnimatior : MonoBehaviour
     public bool standStill = false;         // A bool to make the player quit their moving when something important is happening
 
     private PlayerMovement.Direction _interactionDir = PlayerMovement.Direction.Null;
+    private bool isSceneLoaded = false;
 
     #region ANIM INDICIES
+    private int _SitIndex = 17;
     private int _IdleIndex = 16;
 
     // Forwards = towards camera
@@ -130,6 +128,21 @@ public class PlayerAnimatior : MonoBehaviour
 
             }
         }
+        else if (IsLoad() && !isSceneLoaded)
+        {
+            _animDir = _pMovement.GetDirection();
+            isSceneLoaded = true;
+            /*if (_pMovement.enabled)
+            {
+                _animDir = _pMovement.GetDirection();
+            }
+            else
+            {
+                _animDir = _pFollower.GetDirection();
+            }*/
+        }
+
+        // Need an extra condition just for the last scene when loading out - look at InteractionController
         
 
 
@@ -339,6 +352,23 @@ public class PlayerAnimatior : MonoBehaviour
                 deltaT = _frame / animationSpeed;
             }
 
+            if (GameManager.IsSit)
+            {
+                _aIndex = _SitIndex;
+                if (GameManager.TowardsCam)
+                {
+                    _frameReset = 0;
+                }
+                else
+                {
+                    _frameReset = 1;
+                }
+
+                _frameLoop = _frameReset;
+                _frame = _frameReset;
+                deltaT = _frame / animationSpeed;
+            }
+
             string clipKey, frameKey; 
             // The clip key is which animation is playing, the frame key is which animation it's on
             // Our clip key is set to ROWS, so that each row is an animation
@@ -355,34 +385,6 @@ public class PlayerAnimatior : MonoBehaviour
 
             // Animate
             _frame = (int)(deltaT * animationSpeed);
-
-            //TODO: Footstep sound logic
-            /*if (walkType != 3)
-            {
-                if ((frame == 3) && !footBool1 && isMoving(horizontalInput, verticalInput))
-                {
-                    footBool1 = true;
-                    playFootstep(frame);
-                }
-                if ((frame == 7) && !footBool2 && isMoving(horizontalInput, verticalInput))
-                {
-                    footBool2 = true;
-                    playFootstep(frame);
-                }
-            }
-            else
-            {
-                if ((frame == 2) && !footBool1 && isMoving(horizontalInput, verticalInput))
-                {
-                    footBool1 = true;
-                    playFootstep(frame);
-                }
-                if ((frame == 6) && !footBool2 && isMoving(horizontalInput, verticalInput))
-                {
-                    footBool2 = true;
-                    playFootstep(frame);
-                }
-            }*/
 
             deltaT += Time.deltaTime;
             if (_frame >= _frameLoop)
@@ -403,43 +405,6 @@ public class PlayerAnimatior : MonoBehaviour
     }
 
     // Private methods ----------------------------------------------------------
-
-    private void playFootstep(int frame)
-    {
-
-        /*if (walkType == 0) // Stone
-        {
-            audioSource.Stop();
-            if (frame == 3)
-                audioSource.PlayOneShot(playerSounds[15], GameManager.Instance.entityVolume * GameManager.Instance.masterVolume);
-            if (frame == 7)
-                audioSource.PlayOneShot(playerSounds[16], GameManager.Instance.entityVolume * GameManager.Instance.masterVolume);
-        }
-        else if (walkType == 1) // Earth
-        {
-            audioSource.Stop();
-            if (frame == 3)
-                audioSource.PlayOneShot(playerSounds[19], GameManager.Instance.entityVolume * GameManager.Instance.masterVolume);
-            if (frame == 7)
-                audioSource.PlayOneShot(playerSounds[20], GameManager.Instance.entityVolume * GameManager.Instance.masterVolume);
-        }
-        else if (walkType == 2) // Wood
-        {
-            audioSource.Stop();
-            if (frame == 3)
-                audioSource.PlayOneShot(playerSounds[21], GameManager.Instance.entityVolume * GameManager.Instance.masterVolume);
-            if (frame == 7)
-                audioSource.PlayOneShot(playerSounds[22], GameManager.Instance.entityVolume * GameManager.Instance.masterVolume);
-        }
-        else // Water
-        {
-            if (frame == 2)
-                audioSource.PlayOneShot(playerSounds[17], GameManager.Instance.entityVolume * GameManager.Instance.masterVolume);
-            if (frame == 6)
-                audioSource.PlayOneShot(playerSounds[18], GameManager.Instance.entityVolume * GameManager.Instance.masterVolume);
-        }*/
-    }
-
     public void SetInteractionDir(PlayerMovement.Direction dir)
     {
         _interactionDir = dir;

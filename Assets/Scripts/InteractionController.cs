@@ -135,7 +135,19 @@ public class InteractionController : MonoBehaviour
         _p2Anim.SetInteractionDir(_character2Dir);
 
         // Wait for everything to happen
-        yield return new WaitForSeconds(2f);
+        
+        yield return new WaitUntil(() => _p1Follow.GetAction() == PlayerMovement.Action.Idle);
+        yield return new WaitUntil(() => _p2Follow.GetAction() == PlayerMovement.Action.Idle);
+
+        string sceneName = SceneManager.GetActiveScene().name;
+        if (sceneName == "Area3" || sceneName == "Area8")
+        {
+            GameManager.IsSit = true;
+            if (sceneName == "Area3")
+                GameManager.TowardsCam = true;
+        }
+
+        yield return new WaitForSeconds(.7f);
 
         // Get the positions of the characters in terms of the screen so the speech bubbles work
         Vector3 chara1Raw = Camera.main.WorldToScreenPoint(_p1.transform.position);
@@ -190,12 +202,15 @@ public class InteractionController : MonoBehaviour
         }
         // Wait until that's done
         ViewManager.Show<Standard>(false);
+        GameManager.IsSit = false;
+        GameManager.TowardsCam = false;
 
         if (_endGame)
         {
-            
             _interactionCamera2.gameObject.SetActive(true);
             _interactionCamera.gameObject.SetActive(false);
+            _p1Anim.enabled = false;
+            _p2Anim.enabled = false;
             yield return new WaitForSeconds(3f);
             ViewManager.Show<Transition>(false);
             _sceneLoader.LoadNextScene();

@@ -29334,7 +29334,7 @@ PrefabInstance:
       objectReference: {fileID: 139261855}
     - target: {fileID: 8971274123459589863, guid: 060dedc05a48c4546886f710106456e3, type: 3}
       propertyPath: m_PlaneDistance
-      value: 2
+      value: 1.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

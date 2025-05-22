@@ -17,18 +17,29 @@ public class GameManager : MonoBehaviour
 
     public static bool P1Leading;
     public static bool CanLoadAgent;    // Whether the characters are together and we can move along
+    public static bool CanToss;         // Whether P2 can toss (used to prevent cam jank)
     public static bool IsGamerControls; // What control scheme is read onto the trail signs
     public static bool IsTapThru;       // Whether the player can rapid tap through dialogue
     public static bool GameComplete;    // If the player has been to the credits
+
+    public static bool IsSit;           // The worst boolean ever invented, for a specific late implementation animation bypass
+    public static bool TowardsCam;      // The second worst boolean ever invented
+
     public static float GameVol;
 
     private static void DefaultData()
     {
         P1Leading = true;
         CanLoadAgent = true;
+        CanToss = true;
+
         IsGamerControls = true;
         IsTapThru = false;
         GameComplete = false;
+
+        IsSit = false;
+        TowardsCam = false;
+
         GameVol = 1;
     }
 

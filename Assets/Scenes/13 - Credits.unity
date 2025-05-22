@@ -210,6 +210,7 @@ GameObject:
   - component: {fileID: 255674323}
   - component: {fileID: 255674322}
   - component: {fileID: 255674321}
+  - component: {fileID: 255674325}
   m_Layer: 0
   m_Name: Main Camera (1)
   m_TagString: MainCamera
@@ -335,6 +336,26 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &255674325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 255674320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e188ee899633d0b49870a5ae38b7359d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ratio: {x: 16, y: 9}
+  forceRatioOnAwake: 1
+  listenForWindowChanges: 1
+  createCameraForLetterBoxRendering: 1
+  findCamerasAutomatically: 1
+  letterBoxCameraColor: {r: 0, g: 0, b: 0, a: 1}
+  cameras: []
+  letterBoxCamera: {fileID: 0}
 --- !u!1 &288874599
 GameObject:
   m_ObjectHideFlags: 0
@@ -1050,8 +1071,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 138, y: 138}
+  m_AnchoredPosition: {x: -4.387, y: 0}
+  m_SizeDelta: {x: 129.225, y: 138}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1036673848
 MonoBehaviour:
@@ -1650,8 +1671,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 138, y: 138}
+  m_AnchoredPosition: {x: -4.323, y: -4.307}
+  m_SizeDelta: {x: 129.354, y: 129.387}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1694214153
 MonoBehaviour:

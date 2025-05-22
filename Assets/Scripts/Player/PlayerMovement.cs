@@ -120,6 +120,11 @@ public class PlayerMovement : MonoBehaviour
         if (Mathf.Abs(dir.y) < threshold)
             dir.y = 0;
 
+        if(GameManager.Instance._currentGameState == GameManager.GameState.Load)
+        {
+            return _currentDir;
+        }
+
         if(HorizontalInput != 0 || VerticalInput != 0) // Make sure input is the cause of change and not minute movements
         {
             if (dir.x > 0) // Positive X motion (right)

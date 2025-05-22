@@ -13,6 +13,8 @@ public class Follower : MonoBehaviour
     public bool RaycastGrounded = false;
     public bool Navigate = true;
 
+    private bool IsResumingNav;
+
     private PlayerMovement.Direction _currentDir;
     private PlayerMovement.Action _currentAction;
 
@@ -72,6 +74,12 @@ public class Follower : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if(agent.pathStatus != NavMeshPathStatus.PathPartial && IsResumingNav)
+        {
+            UpdateCurrentPosition();
+            IsResumingNav = false;
+        }
+
         if (agent.pathStatus != NavMeshPathStatus.PathPartial)
         {
             if (Mathf.Abs(Vector3.Distance(goal.position, this.transform.position)) > StopDistance)
@@ -88,6 +96,7 @@ public class Follower : MonoBehaviour
         else
         {
             _rb.constraints = RigidbodyConstraints.FreezePosition | RigidbodyConstraints.FreezeRotation;
+            IsResumingNav = true;
         }
 
 
@@ -118,6 +127,11 @@ public class Follower : MonoBehaviour
                 xDist = 0;
             if (Mathf.Abs(zDist) < significanceThreshold)
                 zDist = 0;
+
+            if (GameManager.Instance._currentGameState == GameManager.GameState.Load)
+            {
+                return _currentDir;
+            }
 
             if (xDist > 0) // Goal X greater than Follower X (go right)
             {

@@ -54,8 +54,12 @@ public class EnableStairs : MonoBehaviour
     {
         _mainCam.SetActive(false);
         newCam.SetActive(true);
+        GameManager.CanToss = false;
         yield return new WaitForSeconds(_time);
         _mainCam.SetActive(true);
         newCam.SetActive(false);
+
+        yield return new WaitForSeconds(2f);
+        GameManager.CanToss = true;
     }
 }

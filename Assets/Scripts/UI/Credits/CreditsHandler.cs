@@ -22,6 +22,7 @@ public class CreditsHandler : MonoBehaviour
     [SerializeField, Tooltip("Part 2")] private GameObject _part2;
 
     private AudioSource _source;
+    private bool _activeC;
     void Start()
     {
         _poemText.text = "";
@@ -79,24 +80,31 @@ public class CreditsHandler : MonoBehaviour
         StartCoroutine(DoTextRead(_creditText, "A game by Andrew Kohler", 11f));
         yield return new WaitForSeconds(11f);
 
+        yield return new WaitUntil(() => !_activeC);
         StartCoroutine(DoTextRead(_creditText, "Made in completion of an undergraduate honors thesis at the University of Florida", 14f));
         yield return new WaitForSeconds(14f);
 
+        yield return new WaitUntil(() => !_activeC);
         StartCoroutine(DoTextRead(_creditText, "Sounds by Traian1984, TRP, Garuda1982, and bspiller5", 11f));
         yield return new WaitForSeconds(11f);
 
+        yield return new WaitUntil(() => !_activeC);
         StartCoroutine(DoTextRead(_creditText, "'Wild Mountain Thyme' performed by Susan Greenwood", 14f));
         yield return new WaitForSeconds(14f);
 
+        yield return new WaitUntil(() => !_activeC);
         StartCoroutine(DoTextRead(_creditText, "Special thanks to Professor Joshua Fox, my advisor...", 11f));
         yield return new WaitForSeconds(11f);
 
+        yield return new WaitUntil(() => !_activeC);
         StartCoroutine(DoTextRead(_creditText, "...and to everyone who believed.", 13f));
         yield return new WaitForSeconds(13f);
 
-        StartCoroutine(DoTextRead(_creditText, "(c) Narwhal Productions 2025", 12f));
-        yield return new WaitForSeconds(12f);
+        yield return new WaitUntil(() => !_activeC);
+        StartCoroutine(DoTextRead(_creditText, "(c) Narwhal Productions 2025", 11f));
+        yield return new WaitForSeconds(11f);
 
+        yield return new WaitUntil(() => !_activeC);
         yield return new WaitForSeconds(2f);
         StartCoroutine(DoTextRead(_dedicationText, "For Rue, my friend in the woods", 999f));
 
@@ -110,6 +118,7 @@ public class CreditsHandler : MonoBehaviour
 
     private IEnumerator DoTextRead(TextMeshProUGUI text, string line, float readTime)
     {
+        _activeC = true;
         for (int j = 0; j < line.Length; j++)
         {
             if (line[j].Equals(' '))
@@ -124,6 +133,7 @@ public class CreditsHandler : MonoBehaviour
         text.text = line;
         yield return new WaitForSeconds(readTime);
         text.text = "";
+        _activeC = false;
         
     }
 }

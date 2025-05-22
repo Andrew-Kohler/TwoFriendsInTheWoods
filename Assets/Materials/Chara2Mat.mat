@@ -39,7 +39,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _Main_Texture:
-        m_Texture: {fileID: 2800000, guid: d74f6cc9ba71b3649a79b06b4ada35df, type: 3}
+        m_Texture: {fileID: 2800000, guid: bda4907be333c5548ac9a62e3bc879db, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Shadow_Texture:
@@ -82,7 +82,7 @@ Material:
     - _ZWriteControl: 0
     - _shadow: 1
     m_Colors:
-    - _Grid_Size: {r: 8, g: 17, b: 0, a: 0}
+    - _Grid_Size: {r: 8, g: 18, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &8179456617571788280
 MonoBehaviour:

@@ -18,5 +18,11 @@ public class PauseListener : MonoBehaviour
             ViewManager.Show<Pause>(true);
             Time.timeScale = 0f;
         }
+
+        else if (Input.GetButtonDown("Pause") && Time.timeScale == 0f)
+        {
+            ViewManager.ShowLast();
+            Time.timeScale = 1f;
+        }
     }
 }

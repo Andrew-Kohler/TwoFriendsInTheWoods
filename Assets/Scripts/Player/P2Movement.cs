@@ -45,7 +45,7 @@ public class P2Movement : PlayerMovement
             _holdResetTimer -= Time.deltaTime;
         }
 
-        if (Input.GetButton("Ability") && Vector3.Distance(this.transform.position, _player1TF.position) < 4f && _holdResetTimer <= 0 && _player1Agent.pathStatus != NavMeshPathStatus.PathPartial)
+        if (Input.GetButton("Ability") && Vector3.Distance(this.transform.position, _player1TF.position) < 4f && _holdResetTimer <= 0 && _player1Agent.pathStatus != NavMeshPathStatus.PathPartial && GameManager.CanToss)
         {
             currMoveSpeed = _holdSpeed;
             Holding = true;
@@ -55,6 +55,10 @@ public class P2Movement : PlayerMovement
 
             _player1TF.position = _holdTF.position;
             _player1RB.velocity = Vector3.zero;
+            if(_mainCam == null)
+            {
+                _mainCam = GameObject.FindWithTag("Cam_V-Main");
+            }
             _angleCam.SetActive(true);
             _mainCam.SetActive(false);
 
