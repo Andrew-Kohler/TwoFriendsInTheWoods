@@ -77,35 +77,39 @@ public class CreditsHandler : MonoBehaviour
 
         // Wait a little, then start doing text
         yield return new WaitForSeconds(1.8f);
-        StartCoroutine(DoTextRead(_creditText, "A game by Andrew Kohler", 11f));
+        StartCoroutine(DoTextRead(_creditText, "A game by Andrew Kohler", 10f)); 
+        yield return new WaitForSeconds(10f);
+
+        yield return new WaitUntil(() => !_activeC);
+        StartCoroutine(DoTextRead(_creditText, "Made in completion of an undergraduate honors thesis at the University of Florida", 10f));
+        yield return new WaitForSeconds(10f);
+
+        yield return new WaitUntil(() => !_activeC);
+        StartCoroutine(DoTextRead(_creditText, "Sounds by Traian1984, Fabrizio84, Garuda1982, and bspiller5", 11f));
         yield return new WaitForSeconds(11f);
 
         yield return new WaitUntil(() => !_activeC);
-        StartCoroutine(DoTextRead(_creditText, "Made in completion of an undergraduate honors thesis at the University of Florida", 14f));
-        yield return new WaitForSeconds(14f);
-
-        yield return new WaitUntil(() => !_activeC);
-        StartCoroutine(DoTextRead(_creditText, "Sounds by Traian1984, TRP, Garuda1982, and bspiller5", 11f));
+        StartCoroutine(DoTextRead(_creditText, "'Wild Mountain Thyme' performed by Susan Greenwood", 11f));
         yield return new WaitForSeconds(11f);
 
         yield return new WaitUntil(() => !_activeC);
-        StartCoroutine(DoTextRead(_creditText, "'Wild Mountain Thyme' performed by Susan Greenwood", 14f));
-        yield return new WaitForSeconds(14f);
+        StartCoroutine(DoTextRead(_creditText, "Tested by Susan G., Brianna L., and Snake Enthusiast Chloe M. Van Horn", 10f));
+        yield return new WaitForSeconds(10f);
 
         yield return new WaitUntil(() => !_activeC);
-        StartCoroutine(DoTextRead(_creditText, "Special thanks to Professor Joshua Fox, my advisor...", 11f));
+        StartCoroutine(DoTextRead(_creditText, "Special thanks to Professor Joshua Fox, my advisor...", 10f));
+        yield return new WaitForSeconds(10f);
+
+        yield return new WaitUntil(() => !_activeC);
+        StartCoroutine(DoTextRead(_creditText, "...and to everyone who believed.", 11f));
         yield return new WaitForSeconds(11f);
 
         yield return new WaitUntil(() => !_activeC);
-        StartCoroutine(DoTextRead(_creditText, "...and to everyone who believed.", 13f));
-        yield return new WaitForSeconds(13f);
+        StartCoroutine(DoTextRead(_creditText, "(c) Narwhal Productions 2025", 9f));
+        yield return new WaitForSeconds(9f);
 
         yield return new WaitUntil(() => !_activeC);
-        StartCoroutine(DoTextRead(_creditText, "(c) Narwhal Productions 2025", 11f));
-        yield return new WaitForSeconds(11f);
-
-        yield return new WaitUntil(() => !_activeC);
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(2.25f);
         StartCoroutine(DoTextRead(_dedicationText, "For Rue, my friend in the woods", 999f));
 
         // Wait a bit, then fade out, then back to the main menu

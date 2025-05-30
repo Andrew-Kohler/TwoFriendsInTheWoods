@@ -1987,6 +1987,10 @@ PrefabInstance:
       propertyPath: m_Volume
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2492705794052583706, guid: ced1031488fad67499388a5e64a201cb, type: 3}
+      propertyPath: _ridge
+      value: 
+      objectReference: {fileID: 8300000, guid: 462276017ecce444b9258cff6e75c258, type: 3}
     - target: {fileID: 8067779711268966679, guid: ced1031488fad67499388a5e64a201cb, type: 3}
       propertyPath: m_Name
       value: '[Sound Box]'

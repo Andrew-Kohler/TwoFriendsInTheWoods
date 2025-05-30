@@ -58,7 +58,7 @@ public class SoundBox : MonoBehaviour
         else if (val == 1)
         {
             _audioSource.clip = _ridge;
-            _maxVol = .15f;
+            _maxVol = .04f;
         }
         else if(val == 2)
         {

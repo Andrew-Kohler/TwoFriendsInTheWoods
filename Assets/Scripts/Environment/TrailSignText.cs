@@ -27,7 +27,7 @@ public class TrailSignText : MonoBehaviour
             }
             else if (_signNum == 2)
             {
-                _text.text = "When climbing the trail, hold SHIFT in a pinch.";
+                _text.text = "When climbing the trail, hold LEFT SHIFT in a pinch.";
             }
             else if (_signNum == 3)
             {
@@ -35,7 +35,7 @@ public class TrailSignText : MonoBehaviour
             }
             else if (_signNum == 4)
             {
-                _text.text = "Only rangers that use SHIFT allowed beyond the fence.";
+                _text.text = "Only rangers that use LEFT SHIFT allowed beyond the fence.";
             }
         }
         else
